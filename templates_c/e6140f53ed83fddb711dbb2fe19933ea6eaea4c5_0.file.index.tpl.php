@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-20 11:40:40
+/* Smarty version 4.3.4, created on 2024-03-20 14:02:59
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_65fabd289b2df3_60877629',
+  'unifunc' => 'content_65fade8324b545_26234238',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e6140f53ed83fddb711dbb2fe19933ea6eaea4c5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\index.tpl',
-      1 => 1710931230,
+      1 => 1710939774,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65fabd289b2df3_60877629 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65fade8324b545_26234238 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/basic.css">
+    <link rel="stylesheet" href="./styles/essentials.css">
     <?php echo '<script'; ?>
  src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"><?php echo '</script'; ?>
 >
@@ -58,7 +59,7 @@ function content_65fabd289b2df3_60877629 (Smarty_Internal_Template $_smarty_tpl)
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
             <p class="alertText">Incorrect user information.</p>
         </div> 
-        <?php }?>
+    <?php }?>
 
 </body>
 </html><?php }

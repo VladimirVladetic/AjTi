@@ -54,34 +54,3 @@ h1 {
     background-color: black;
     color: white;
 }
-
-.alert {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    padding: 0.2%;
-    background-color: white; 
-    color: black;
-    margin: 0 auto;
-    width: 50%;
-}
-  
-.closebtn {
-    margin-left: 1%;
-    color: black;
-    font-weight: bold;
-    float: right;
-    font-size: 30px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-  
-.closebtn:hover {
-    color: white;
-}
-
-.alertText{
-    padding: 0;
-    margin: 1%;
-}

@@ -17,15 +17,28 @@
     <div class="leftColumn">
     <img class="logo" src="./images/logo-white-cropped.png" alt="Atos logo"  width="200" height="100"> 
     <p class="margins-needed" id="sessionname" data-value="{$sessionname}">Welcome {$sessionname}</p>
-    {if $sessionrole=="admin"}<form class="margins-needed" id="go-to-newuser" method="post" action="newUser.php"> 
+    {* {if $sessionrole=="admin"}<form class="margins-needed" id="go-to-newuser" method="post" action="newUser.php"> 
         <input class="basic-button" type='submit' name='newuserbtn' value='Enter new user.'/>
-    </form>{/if}
-    {if $sessionrole=="admin"}<form class="margins-needed" id="go-to-newcompany" method="post" action="newCompany.php"> 
+    </form>{/if} *}
+    {if $sessionrole=="admin"}
+        <a href="newUser.php">
+            <button class="basic-button margins-needed">Enter new user</button>
+        </a>
+    {/if}
+    {* {if $sessionrole=="admin"}<form class="margins-needed" id="go-to-newcompany" method="post" action="newCompany.php"> 
         <input class="basic-button" type='submit' name='newcompanybtn' value='Enter new company.'/>
-    </form>{/if}
-    <form class="margins-needed" id="go-to-search" method="post" action="searchUserByID.php">
+    </form>{/if} *}
+    {if $sessionrole=="admin"}
+        <a href="newCompany.php">
+            <button class="basic-button margins-needed">Enter new company</button>
+        </a>
+    {/if}
+    {* <form class="margins-needed" id="go-to-search" method="post" action="searchUserByID.php">
         <input class="basic-button" type="submit" name='gotosearchbtn' value="Search by ID"/>
-    </form>
+    </form> *}
+    <a href="searchUserByID.php">
+        <button class="basic-button margins-needed">Search by ID</button>
+    </a>
     {if $sessionrole=="admin"} <form class="margins-needed" id="delete-selected-users" method="post" action="userList.php">
         <input class="basic-button" type="submit" name='deleteusersbtn' value="Delete selected users"/>
     </form>{/if}
