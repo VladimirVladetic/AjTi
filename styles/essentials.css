@@ -1,0 +1,13 @@
+.basic-button{
+    display: block;
+    margin-top: 2%;
+    background-color: white; 
+    color: black; 
+    padding: 2% 2%; 
+    font-size: auto;
+    border-radius: 10%;
+}
+.basic-button:hover{
+    background-color: black;
+    color: white;
+}

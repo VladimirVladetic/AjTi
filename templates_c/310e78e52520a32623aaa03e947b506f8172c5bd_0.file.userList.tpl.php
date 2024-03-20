@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-20 09:00:18
+/* Smarty version 4.3.4, created on 2024-03-20 12:47:42
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\userList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_65fa9792d13e60_18389959',
+  'unifunc' => 'content_65faccde11ecb6_50594716',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '310e78e52520a32623aaa03e947b506f8172c5bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\userList.tpl',
-      1 => 1709207539,
+      1 => 1710935258,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65fa9792d13e60_18389959 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65faccde11ecb6_50594716 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/users.css">
+    <link rel="stylesheet" href="./styles/essentials.css">
     <?php echo '<script'; ?>
  src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"><?php echo '</script'; ?>
 >
@@ -42,12 +43,28 @@ function content_65fa9792d13e60_18389959 (Smarty_Internal_Template $_smarty_tpl)
 ,<?php echo $_smarty_tpl->tpl_vars['attempts']->value;?>
 )">
 
-    <p id="sessionname" data-value="<?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
-">Hello <?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
-</p>
-
     <div class="container">
-    <img class="logo" src="./images/Atos-Symbol.png" alt="Atos logo"  width="200" height="100"> 
+
+    <div class="leftColumn">
+    <img class="logo" src="./images/logo-white-cropped.png" alt="Atos logo"  width="200" height="100"> 
+    <p id="sessionname" data-value="<?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
+">Welcome <?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
+</p>
+    <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?><form class="margins-needed" id="go-to-newuser" method="post" action="newUser.php"> 
+        <input class="basic-button" type='submit' name='newuserbtn' value='Enter new user.'/>
+    </form><?php }?>
+    <form class="margins-needed" id="go-to-search" method="post" action="searchUserByID.php">
+        <input class="basic-button" type="submit" name='gotosearchbtn' value="Search by ID"/>
+    </form>
+    <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?> <form class="margins-needed" id="delete-selected-users" method="post" action="userList.php">
+        <input class="basic-button" type="submit" name='deleteusersbtn' value="Delete selected users"/>
+    </form><?php }?>
+    <form class="margins-needed" id="logout" method="post" action="userList.php">
+        <input class="basic-button" type="submit" name='logoutbtn' value="Log out"/>
+    </form>
+    </div>
+
+    <div class="rightColumn">
     <table>
         <thead class="margins-needed">
             <tr>
@@ -97,18 +114,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </tbody>
     </table>
-    <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?><form class="margins-needed" id="go-to-newuser" method="post" action="newUser.php"> 
-        <input type='submit' name='newuserbtn' value='Enter new user.'/>
-    </form><?php }?>
-    <form class="margins-needed" id="go-to-search" method="post" action="searchUserByID.php">
-        <input type="submit" name='gotosearchbtn' value="Search by ID"/>
-    </form>
-    <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?> <form class="margins-needed" id="delete-selected-users" method="post" action="userList.php">
-        <input type="submit" name='deleteusersbtn' value="Delete selected users"/>
-    </form><?php }?>
-    <form class="margins-needed" id="logout" method="post" action="userList.php">
-        <input type="submit" name='logoutbtn' value="Log out"/>
-    </form>
+    </div>
     </div>
     
 </body>
