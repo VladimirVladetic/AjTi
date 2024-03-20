@@ -16,9 +16,12 @@
 
     <div class="leftColumn">
     <img class="logo" src="./images/logo-white-cropped.png" alt="Atos logo"  width="200" height="100"> 
-    <p id="sessionname" data-value="{$sessionname}">Welcome {$sessionname}</p>
+    <p class="margins-needed" id="sessionname" data-value="{$sessionname}">Welcome {$sessionname}</p>
     {if $sessionrole=="admin"}<form class="margins-needed" id="go-to-newuser" method="post" action="newUser.php"> 
         <input class="basic-button" type='submit' name='newuserbtn' value='Enter new user.'/>
+    </form>{/if}
+    {if $sessionrole=="admin"}<form class="margins-needed" id="go-to-newcompany" method="post" action="newCompany.php"> 
+        <input class="basic-button" type='submit' name='newcompanybtn' value='Enter new company.'/>
     </form>{/if}
     <form class="margins-needed" id="go-to-search" method="post" action="searchUserByID.php">
         <input class="basic-button" type="submit" name='gotosearchbtn' value="Search by ID"/>
@@ -35,7 +38,6 @@
     <table>
         <thead class="margins-needed">
             <tr>
-                {* <th>ID</th> *}
                 <th>First name</th>
                 <th>Last name</th>
                 <th>Year of birth</th>
@@ -62,6 +64,7 @@
         </tbody>
     </table>
     </div>
+
     </div>
     
 </body>
