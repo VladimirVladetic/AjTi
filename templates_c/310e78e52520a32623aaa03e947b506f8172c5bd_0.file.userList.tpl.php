@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-20 14:00:52
+/* Smarty version 4.3.4, created on 2024-03-20 14:09:50
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\userList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_65fade0427e963_07112457',
+  'unifunc' => 'content_65fae01eb14725_21448939',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '310e78e52520a32623aaa03e947b506f8172c5bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\userList.tpl',
-      1 => 1710939635,
+      1 => 1710940188,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65fade0427e963_07112457 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65fae01eb14725_21448939 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,6 +77,7 @@ function content_65fade0427e963_07112457 (Smarty_Internal_Template $_smarty_tpl)
             <tr>
                 <th>First name</th>
                 <th>Last name</th>
+                <th>Username</th>
                 <th>Year of birth</th>
                 <th>Company</th>
             </tr>
@@ -107,6 +108,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </td> 
                 <td><a href="http://localhost/smarty-4.3.4/AjTi/user.php?id=<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['user']->value['surname'];?>
+</td> 
+                <td><a href="http://localhost/smarty-4.3.4/AjTi/user.php?id=<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['user']->value['username'];?>
 </td> 
                 <td><?php echo $_smarty_tpl->tpl_vars['user']->value['yearofbirth'];?>
 </td> 

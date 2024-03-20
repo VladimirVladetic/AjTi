@@ -51,8 +51,10 @@ if((isset($_POST['name']) && $_POST['name'] != "") || (isset($_POST['surname']) 
     $row = mysqli_fetch_assoc($result);
     $companyid = $row['id'];
 
+    $username = $name . $surname . $id;
+
     if(!$error){
-        $sql = "insert into user(id,name,surname,yearofbirth,password,role,companyid)values('$id','$name','$surname','$yearofbirth','$password','$role','$companyid')";
+        $sql = "insert into user(id,username,name,surname,yearofbirth,password,role,companyid)values('$id','$username','$name','$surname','$yearofbirth','$password','$role','$companyid')";
         if(mysqli_query($con,$sql)){
             echo "<script>alert('Success!')</script>";
             header("Location: userList.php");
