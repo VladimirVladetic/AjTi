@@ -24,5 +24,12 @@
 
     </div>
 
+    {if $attempts > 1}
+        <div class="alert" id="failAlert" style="display: block;">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <p class="alertText">Incorrect user information.</p>
+        </div> 
+        {/if}
+
 </body>
 </html>

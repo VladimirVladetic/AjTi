@@ -2,6 +2,7 @@ body {
     background-color: black;
     margin: 5%;
     font-family: 'Times New Roman', Times, serif;
+    overflow-y: hidden;
 }
 
 h1 {
@@ -20,7 +21,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 25%;
+    padding-top: 22.5%;
     padding-right: 25%;
 }
 
@@ -31,7 +32,7 @@ h1 {
     border: 10px solid black;
     border-color: black;
     padding-left: 20%;
-    padding-top: 2.5%;
+    padding-top: 0%;
 }
 
 .login-form-container input{
@@ -52,5 +53,35 @@ h1 {
 #login-button:hover {
     background-color: black;
     color: white;
-  }
+}
 
+.alert {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 0.2%;
+    background-color: white; 
+    color: black;
+    margin: 0 auto;
+    width: 50%;
+}
+  
+.closebtn {
+    margin-left: 1%;
+    color: black;
+    font-weight: bold;
+    float: right;
+    font-size: 30px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+.closebtn:hover {
+    color: white;
+}
+
+.alertText{
+    padding: 0;
+    margin: 1%;
+}

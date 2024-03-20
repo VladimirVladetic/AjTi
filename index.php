@@ -10,6 +10,11 @@ if(!isset($_SESSION['attempts'])){
     $_SESSION['attempts']=1;
 }
 
+// if($_SESSION['attempts'] > 1){
+//     echo $_SESSION['attempts'];
+//     echo "<script>document.getElementById('failAlert').style.display = 'block';</script>";
+// }
+
 // $sql = "delete from user where surname=''";
 // mysqli_query($con,$sql);
 
@@ -41,11 +46,12 @@ if(isset($_POST['loginbtn'])){
     }
     else{
         $_SESSION['attempts'] += 1;
-        echo "<script>alert('Incorrect user information.')</script>";
+        // echo "<script>alert('Incorrect user information.')</script>";
     }
 }
 
 mysqli_close($con);
 
+$smarty->assign('attempts', $_SESSION['attempts']);
 $smarty->display('templates/index.tpl');
 ?>
