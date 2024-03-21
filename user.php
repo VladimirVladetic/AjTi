@@ -24,6 +24,8 @@ if(isset($_GET['id'])){
     $password = $row['password'];
     $role = $row['role'];
     $companyid = $row['companyid'];
+    $username = $row['username'];
+    $email = $row['email'];
 
     $sql = "select name from company where id=$companyid";
     $result = mysqli_query($con,$sql);
@@ -46,13 +48,14 @@ if(isset($_POST['deleteuserbtn'])){
     header("Location: userList.php");
 }
 
-if(isset($_POST['name']) || isset($_POST['surname']) || isset($_POST['yearofbirth']) || isset($_POST['password'])){
+if(isset($_POST['name']) || isset($_POST['surname']) || isset($_POST['username']) || isset($_POST['yearofbirth']) || isset($_POST['password'])){
     $name = $_POST['name'];
     $surname = $_POST['surname'];
     $yearofbirth = $_POST['yearofbirth'];
     $password = $_POST['password'];
+    $username = $_POST['username'];
 
-    $sql = "update user set name = '$name', surname = '$surname', yearofbirth = '$yearofbirth', password = '$password' where id = $id;";
+    $sql = "update user set username = '$username', name = '$name', surname = '$surname', yearofbirth = '$yearofbirth', password = '$password' where id = $id;";
     mysqli_query($con,$sql);
 }
 
@@ -63,6 +66,8 @@ $smarty->assign('name',$name);
 $smarty->assign('surname',$surname);
 $smarty->assign('yearofbirth',$yearofbirth);
 $smarty->assign('password',$password);
+$smarty->assign('username',$username);
+$smarty->assign('email',$email);
 $smarty->assign('role',$role);
 $smarty->assign('companyname',$companyname);
 $smarty->assign('sessionrole',$_SESSION['role']);
