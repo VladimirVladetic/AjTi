@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-21 09:19:10
+/* Smarty version 4.3.4, created on 2024-03-21 10:35:21
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\userList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_65fbed7e149404_68036728',
+  'unifunc' => 'content_65fbff5903ade9_68469926',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '310e78e52520a32623aaa03e947b506f8172c5bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\userList.tpl',
-      1 => 1711009147,
+      1 => 1711013718,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65fbed7e149404_68036728 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65fbff5903ade9_68469926 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,13 +102,13 @@ $_smarty_tpl->tpl_vars['company']->do_else = false;
             <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                <td><a href="http://localhost/smarty-4.3.4/AjTi/user.php?id=<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
+                <td><a href="user.php?id=<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
 </td> 
-                <td><a href="http://localhost/smarty-4.3.4/AjTi/user.php?id=<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
+                <td><a href="user.php?id=<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['user']->value['surname'];?>
 </td> 
-                                <td><a href="http://localhost/smarty-4.3.4/AjTi/user.php?id=<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
+                                <td><a href="user.php?id=<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['user']->value['email'];?>
 </a>  
                 <td><?php echo $_smarty_tpl->tpl_vars['companyname']->value;?>

@@ -67,10 +67,10 @@
                     {$companyname = $company.name}
                 {/if}
             {/foreach}
-                <td><a href="http://localhost/smarty-4.3.4/AjTi/user.php?id={$user.id}">{$user.name}</td> 
-                <td><a href="http://localhost/smarty-4.3.4/AjTi/user.php?id={$user.id}">{$user.surname}</td> 
-                {* <td><a href="http://localhost/smarty-4.3.4/AjTi/user.php?id={$user.id}">{$user.username}</td> *}
-                <td><a href="http://localhost/smarty-4.3.4/AjTi/user.php?id={$user.id}">{$user.email}</a>  
+                <td><a href="user.php?id={$user.id}">{$user.name}</td> 
+                <td><a href="user.php?id={$user.id}">{$user.surname}</td> 
+                {* <td><a href="user.php?id={$user.id}">{$user.username}</td> *}
+                <td><a href="user.php?id={$user.id}">{$user.email}</a>  
                 <td>{$companyname}</td>
                 {if $sessionrole=="admin"}<td><input type="checkbox" form="delete-selected-users" name="checkbox{$user.id}"/></td>{/if}
             <tr> 
