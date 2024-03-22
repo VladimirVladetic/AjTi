@@ -19,10 +19,6 @@
     overflow-y: auto;
 }
 
-.margins-needed{
-    margin: 3%;
-}
-
 td{
     font-size: 200%;
     padding-top: 0.1em;

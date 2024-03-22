@@ -19,6 +19,10 @@ body{
     color: white;
 }
 
+.margins-needed{
+    margin: 3%;
+}
+
 a {
     text-decoration: none;
     color: inherit;
