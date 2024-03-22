@@ -23,7 +23,7 @@
     </form>{/if} *}
     {if $sessionrole=="admin"}
         <a href="newUser.php">
-            <button class="basic-button margins-needed">Enter new user</button>
+            <button class="basic-button">Enter new user</button>
         </a>
     {/if}
     {* {if $sessionrole=="admin"}<form class="margins-needed" id="go-to-newcompany" method="post" action="newCompany.php"> 
@@ -31,21 +31,20 @@
     </form>{/if} *}
     {if $sessionrole=="admin"}
         <a href="newCompany.php">
-            <button class="basic-button margins-needed">Enter new company</button>
+            <button class="basic-button">Enter new company</button>
         </a>
     {/if}
     {* <form class="margins-needed" id="go-to-search" method="post" action="searchUserByID.php">
         <input class="basic-button" type="submit" name='gotosearchbtn' value="Search by ID"/>
     </form> *}
     <a href="searchUserByID.php">
-        <button class="basic-button margins-needed">Search by ID</button>
+        <button class="basic-button">Search by ID</button>
     </a>
-    {if $sessionrole=="admin"} <form class="margins-needed" id="delete-selected-users" method="post" action="userList.php">
-        <input class="basic-button" type="submit" name='deleteusersbtn' value="Delete selected users"/>
-    </form>{/if}
-    <form class="margins-needed" id="logout" method="post" action="userList.php">
-        <input class="basic-button" type="submit" name='logoutbtn' value="Log out"/>
-    </form>
+    {if $sessionrole=="admin"} <form class="margins-needed" id="delete-selected-users" method="post" action="userList.php"></form>
+    <input class="basic-button" form="delete-selected-users" type="submit" name='deleteusersbtn' value="Delete selected users"/>
+    {/if}
+    <form class="margins-needed" id="logout" method="post" action="userList.php"></form>
+    <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>
     </div>
 
     <div class="rightColumn">

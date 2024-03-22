@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-22 13:18:40
+/* Smarty version 4.3.4, created on 2024-03-22 13:47:25
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\userList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_65fd7720d03700_96380291',
+  'unifunc' => 'content_65fd7ddd2583c4_06927855',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '310e78e52520a32623aaa03e947b506f8172c5bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\userList.tpl',
-      1 => 1711109893,
+      1 => 1711111642,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65fd7720d03700_96380291 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65fd7ddd2583c4_06927855 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,23 +53,22 @@ function content_65fd7720d03700_96380291 (Smarty_Internal_Template $_smarty_tpl)
 </p>
         <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
         <a href="newUser.php">
-            <button class="basic-button margins-needed">Enter new user</button>
+            <button class="basic-button">Enter new user</button>
         </a>
     <?php }?>
         <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
         <a href="newCompany.php">
-            <button class="basic-button margins-needed">Enter new company</button>
+            <button class="basic-button">Enter new company</button>
         </a>
     <?php }?>
         <a href="searchUserByID.php">
-        <button class="basic-button margins-needed">Search by ID</button>
+        <button class="basic-button">Search by ID</button>
     </a>
-    <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?> <form class="margins-needed" id="delete-selected-users" method="post" action="userList.php">
-        <input class="basic-button" type="submit" name='deleteusersbtn' value="Delete selected users"/>
-    </form><?php }?>
-    <form class="margins-needed" id="logout" method="post" action="userList.php">
-        <input class="basic-button" type="submit" name='logoutbtn' value="Log out"/>
-    </form>
+    <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?> <form class="margins-needed" id="delete-selected-users" method="post" action="userList.php"></form>
+    <input class="basic-button" form="delete-selected-users" type="submit" name='deleteusersbtn' value="Delete selected users"/>
+    <?php }?>
+    <form class="margins-needed" id="logout" method="post" action="userList.php"></form>
+    <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>
     </div>
 
     <div class="rightColumn">
