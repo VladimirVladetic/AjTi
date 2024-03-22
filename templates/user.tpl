@@ -38,8 +38,8 @@
                 <input class="input-text" id="info-password" type="text" name="password" placeholder="Enter password."{if isset($password)} value="{$password}" {/if}>
                 <p>Company: {if isset($companyname)} {$companyname} {/if}</p>
                 <p>{if isset($role)} Role: {$role} {/if}</p>
-                <button class="basic-button" id="update-info-button">Update user information</button>
             </form>
+            <button class="basic-button" form="update-user-form" id="update-info-button">Update user information</button>
             <button class="basic-button" onclick="openChangeCompanyPopup()">Change company</button>
         {/if}
         {if $sessionrole=="user"}

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-22 13:31:22
+/* Smarty version 4.3.4, created on 2024-03-22 13:41:54
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_65fd7a1ac157c8_31184508',
+  'unifunc' => 'content_65fd7c92c6d534_32204625',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a0da77831dd5fc3b77aa3c8fe4770245592ce60d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\user.tpl',
-      1 => 1711110681,
+      1 => 1711111273,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65fd7a1ac157c8_31184508 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65fd7c92c6d534_32204625 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,8 +76,8 @@ function content_65fd7a1ac157c8_31184508 (Smarty_Internal_Template $_smarty_tpl)
  <?php }?></p>
                 <p><?php if ((isset($_smarty_tpl->tpl_vars['role']->value))) {?> Role: <?php echo $_smarty_tpl->tpl_vars['role']->value;?>
  <?php }?></p>
-                <button class="basic-button" id="update-info-button">Update user information</button>
             </form>
+            <button class="basic-button" form="update-user-form" id="update-info-button">Update user information</button>
             <button class="basic-button" onclick="openChangeCompanyPopup()">Change company</button>
         <?php }?>
         <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "user") {?>
