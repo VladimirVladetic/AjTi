@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-22 12:44:16
+/* Smarty version 4.3.4, created on 2024-03-22 13:14:08
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_65fd6f10c78255_30599394',
+  'unifunc' => 'content_65fd7610092fa1_92263074',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a0da77831dd5fc3b77aa3c8fe4770245592ce60d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\user.tpl',
-      1 => 1711107855,
+      1 => 1711109645,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65fd6f10c78255_30599394 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65fd7610092fa1_92263074 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,17 +51,17 @@ function content_65fd6f10c78255_30599394 (Smarty_Internal_Template $_smarty_tpl)
         <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
             <form class="margins-needed" id="update-user-form" method="post" action="user.php?id=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 ">
-                <tr><td>Username: <input id="info-username" type="text" name="username" placeholder="Enter username." <?php if ((isset($_smarty_tpl->tpl_vars['username']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['username']->value;?>
+                <tr><td>Username: <input class="input-text" id="info-username" type="text" name="username" placeholder="Enter username." <?php if ((isset($_smarty_tpl->tpl_vars['username']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['username']->value;?>
 " <?php }?>></td></tr>
-                <tr><td>Name: <input id="info-name" type="text" name="name" placeholder="Enter name." <?php if ((isset($_smarty_tpl->tpl_vars['name']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+                <tr><td>Name: <input class="input-text" id="info-name" type="text" name="name" placeholder="Enter name." <?php if ((isset($_smarty_tpl->tpl_vars['name']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
 " <?php }?>></td></tr>
-                <tr><td>Surname: <input id="info-surname" type="text" name="surname" placeholder="Enter surname." <?php if ((isset($_smarty_tpl->tpl_vars['surname']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['surname']->value;?>
+                <tr><td>Surname: <input class="input-text" id="info-surname" type="text" name="surname" placeholder="Enter surname." <?php if ((isset($_smarty_tpl->tpl_vars['surname']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['surname']->value;?>
 " <?php }?>></td></tr>
-                <tr><td>E-mail: <input id="info-email" type="email" name="email" placeholder="Enter e-mail." <?php if ((isset($_smarty_tpl->tpl_vars['email']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['email']->value;?>
+                <tr><td>E-mail: <input class="input-text" id="info-email" type="email" name="email" placeholder="Enter e-mail." <?php if ((isset($_smarty_tpl->tpl_vars['email']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['email']->value;?>
 " <?php }?>></td></tr>
-                <tr><td>Year of birth: <input id="info-yearofbirth" type="number" name="yearofbirth" placeholder="Enter year of birth."<?php if ((isset($_smarty_tpl->tpl_vars['yearofbirth']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['yearofbirth']->value;?>
+                <tr><td>Year of birth: <input class="input-text" id="info-yearofbirth" type="number" name="yearofbirth" placeholder="Enter year of birth."<?php if ((isset($_smarty_tpl->tpl_vars['yearofbirth']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['yearofbirth']->value;?>
 " <?php }?>></td></tr>
-                <tr><td>Password: <input id="info-password" type="text" name="password" placeholder="Enter password."<?php if ((isset($_smarty_tpl->tpl_vars['password']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['password']->value;?>
+                <tr><td>Password: <input class="input-text" id="info-password" type="text" name="password" placeholder="Enter password."<?php if ((isset($_smarty_tpl->tpl_vars['password']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['password']->value;?>
 " <?php }?>></td></tr>
                 <tr><td>Company: <?php if ((isset($_smarty_tpl->tpl_vars['companyname']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['companyname']->value;?>
  <?php }?></td></tr>
@@ -87,10 +87,10 @@ function content_65fd6f10c78255_30599394 (Smarty_Internal_Template $_smarty_tpl)
     </table>
         <form id="delete-this-user" method="post" action="user.php?id=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 ">
-            <input class="basic-button" type='submit' name='deleteuserbtn' value="Delete user"/>
+            <input class="basic-input-button" type='submit' name='deleteuserbtn' value="Delete user"/>
         </form>
         <form id="go-to-userlist" method="post" action="userList.php"> 
-            <input class="basic-button" type='submit' name='userlist' value='Go to user list'/>
+            <input class="basic-input-button" type='submit' name='userlist' value='Go to user list'/>
         </form>
 
     </div>
