@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-21 10:32:39
+/* Smarty version 4.3.4, created on 2024-03-22 12:44:16
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_65fbfeb7647b45_90329950',
+  'unifunc' => 'content_65fd6f10c78255_30599394',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a0da77831dd5fc3b77aa3c8fe4770245592ce60d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\user.tpl',
-      1 => 1711013557,
+      1 => 1711107855,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65fbfeb7647b45_90329950 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65fd6f10c78255_30599394 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/users.css">
+    <link rel="stylesheet" href="./styles/user.css">
+    <link rel="stylesheet" href="./styles/essentials.css">
         <?php echo '<script'; ?>
  src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"><?php echo '</script'; ?>
 >
@@ -48,7 +49,7 @@ function content_65fbfeb7647b45_90329950 (Smarty_Internal_Template $_smarty_tpl)
 "></div>
 
         <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
-            <form class="margins-needed" id="update-user-form" method="post" action="http://localhost/smarty-4.3.4/CompanyProject/user.php?id=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
+            <form class="margins-needed" id="update-user-form" method="post" action="user.php?id=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 ">
                 <tr><td>Username: <input id="info-username" type="text" name="username" placeholder="Enter username." <?php if ((isset($_smarty_tpl->tpl_vars['username']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['username']->value;?>
 " <?php }?>></td></tr>
@@ -66,13 +67,9 @@ function content_65fbfeb7647b45_90329950 (Smarty_Internal_Template $_smarty_tpl)
  <?php }?></td></tr>
                 <tr><td><?php if ((isset($_smarty_tpl->tpl_vars['role']->value))) {?> Role: <?php echo $_smarty_tpl->tpl_vars['role']->value;?>
  <?php }?> </td></tr>
-                <tr><td><button id="update-info-button">Update user information</button></td></tr>
+                <tr><td><button class="basic-button" id="update-info-button">Update user information</button></td></tr>
             </form>
-            <tr><td><button onclick="openChangeCompanyPopup()">Change company</button></td></tr>
-            <form class="margins-needed" id="delete-this-user" method="post" action="http://localhost/smarty-4.3.4/CompanyProject/user.php?id=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
-">
-                <tr><td><input type='submit' name='deleteuserbtn' value="Delete user"/></td></tr>
-            </form>
+            <tr><td><button class="basic-button" onclick="openChangeCompanyPopup()">Change company</button></td></tr>
         <?php }?>
         <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "user") {?>
             <tr><td>Name: <?php if ((isset($_smarty_tpl->tpl_vars['name']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['name']->value;?>
@@ -86,10 +83,16 @@ function content_65fbfeb7647b45_90329950 (Smarty_Internal_Template $_smarty_tpl)
             <tr><td><?php if ((isset($_smarty_tpl->tpl_vars['role']->value))) {?> Role: <?php echo $_smarty_tpl->tpl_vars['role']->value;?>
  <?php }?> </td></tr>
         <?php }?>
-            <form class="margins-needed" id="go-to-userlist" method="post" action="userList.php"> 
-            <tr><td><input type='submit' name='userlist' value='Go to user list'/></td></tr>
-            </form>
+            
     </table>
+        <form id="delete-this-user" method="post" action="user.php?id=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
+">
+            <input class="basic-button" type='submit' name='deleteuserbtn' value="Delete user"/>
+        </form>
+        <form id="go-to-userlist" method="post" action="userList.php"> 
+            <input class="basic-button" type='submit' name='userlist' value='Go to user list'/>
+        </form>
+
     </div>
 
     <div class="overlay" id="overlay"></div>
@@ -110,8 +113,8 @@ $_smarty_tpl->tpl_vars['company']->do_else = false;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </select>
-            <button onclick="submitChange()">Submit</button>
-            <button onclick="closePopup()">Close</button>
+            <button class="basic-button" onclick="submitChange()">Submit</button>
+            <button class="basic-button" onclick="closePopup()">Close</button>
         </div>
 
 </body>

@@ -1,9 +1,16 @@
+body{
+    background-color: black;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
 .basic-button{
     display: block;
     margin-top: 2%;
     background-color: white; 
     color: black; 
     padding: 2% 2%; 
+    width: 50%;
     font-size: auto;
     border-radius: 10%;
 }
