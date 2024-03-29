@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-29 11:41:46
+/* Smarty version 4.3.4, created on 2024-03-29 11:44:57
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_66069aeac9bad9_74657933',
+  'unifunc' => 'content_66069ba9a47034_24650239',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a0da77831dd5fc3b77aa3c8fe4770245592ce60d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\user.tpl',
-      1 => 1711706811,
+      1 => 1711709095,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66069aeac9bad9_74657933 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66069ba9a47034_24650239 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +38,8 @@ function content_66069aeac9bad9_74657933 (Smarty_Internal_Template $_smarty_tpl)
     <?php echo '<script'; ?>
  src="./js/changeCompany.js" defer><?php echo '</script'; ?>
 >
-    <title>User page</title>
+    <title>User page for <?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+</title>
 </head>
 <body>
 
