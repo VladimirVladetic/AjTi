@@ -9,6 +9,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
     <script src="./js/enterLog.js" defer></script>
+    <script src="./js/spinner.js" defer></script>
     <title>User list</title>
 </head>
 <body onload="enterLog({$logsent},{$attempts})">
@@ -16,7 +17,7 @@
     <div class="container">
 
     <div class="leftColumn">
-    <img class="logo" src="./images/logo-white-cropped.png" alt="logo"  width="200" height="100"> 
+    <img class="logo" src="./images/new-logo.png" alt="logo"  width="200" height="auto"> 
     <p class="margins-needed" id="sessionname" data-value="{$sessionname}">Welcome {$sessionname}</p>
     {if $sessionrole=="admin"}
         <a href="newUser.php">
@@ -39,37 +40,47 @@
     </div>
 
     <div class="rightColumn">
-    <table>
-        <thead class="margins-needed">
-            <tr>
-                <th>First name</th>
-                <th>Last name</th>
-                {* <th>Username</th> *}
-                <th>E-mail</th>
-                <th>Company</th>
-            </tr>
-        </thead>
-        <tbody class="margins-needed">
-        {foreach from=$data item=user} 
-            {if !($sessionrole=="user" && $user.role=="admin")}
-            <tr> 
-            {foreach from=$companydata item=company}
-                {if $company.id == $user.companyid}
-                    {$companyname = $company.name}
+
+        <div class="spinner-container">
+            <div class="spinner"></div>
+        </div>
+
+        <div class="searchBar">
+            <input class="margins-needed" type="number" placeholder="Enter ID" id="id-number">
+            <button class="basic-button" id="searchbtn" onclick="showSpinner()">Search user</button>
+        </div>
+
+        <table>
+            <thead class="margins-needed">
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    {* <th>Username</th> *}
+                    <th>E-mail</th>
+                    <th>Company</th>
+                </tr>
+            </thead>
+            <tbody class="margins-needed">
+            {foreach from=$data item=user} 
+                {if !($sessionrole=="user" && $user.role=="admin")}
+                <tr> 
+                {foreach from=$companydata item=company}
+                    {if $company.id == $user.companyid}
+                        {$companyname = $company.name}
+                    {/if}
+                {/foreach}
+                    <td><a href="user.php?id={$user.id}">{$user.name}</td> 
+                    <td><a href="user.php?id={$user.id}">{$user.surname}</td> 
+                    {* <td><a href="user.php?id={$user.id}">{$user.username}</td> *}
+                    <td><a href="user.php?id={$user.id}">{$user.email}</a>  
+                    <td>{$companyname}</td>
+                    {if $sessionrole=="admin"}<td><input type="checkbox" form="delete-selected-users" name="checkbox{$user.id}"/></td>{/if}
+                <tr> 
                 {/if}
             {/foreach}
-                <td><a href="user.php?id={$user.id}">{$user.name}</td> 
-                <td><a href="user.php?id={$user.id}">{$user.surname}</td> 
-                {* <td><a href="user.php?id={$user.id}">{$user.username}</td> *}
-                <td><a href="user.php?id={$user.id}">{$user.email}</a>  
-                <td>{$companyname}</td>
-                {if $sessionrole=="admin"}<td><input type="checkbox" form="delete-selected-users" name="checkbox{$user.id}"/></td>{/if}
-            <tr> 
-            {/if}
-        {/foreach}
-        </tbody>
-    </table>
-    </div>
+            </tbody>
+        </table>
+        </div>
 
     </div>
     

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-20 14:02:59
+/* Smarty version 4.3.4, created on 2024-03-29 10:02:21
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_65fade8324b545_26234238',
+  'unifunc' => 'content_6606839d513260_11170674',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e6140f53ed83fddb711dbb2fe19933ea6eaea4c5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\index.tpl',
-      1 => 1710939774,
+      1 => 1711702940,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65fade8324b545_26234238 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6606839d513260_11170674 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +44,7 @@ function content_65fade8324b545_26234238 (Smarty_Internal_Template $_smarty_tpl)
 
     <div class="container">
     
-        <img class="logo" src="./images/logo-white.png" alt="Atos logo"  width="200" height="100"> 
+        <img class="logo" src="./images/new-logo.png" alt="Atos logo"  width="200" height="100"> 
         <form id="login-form" method="post" action="index.php" class="login-form-container">
             <h1> USER LOGIN </h1>
             <input id="login-username" type="text" name="username" placeholder="Enter your username."/>

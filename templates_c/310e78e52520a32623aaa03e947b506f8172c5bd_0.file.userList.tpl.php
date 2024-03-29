@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-29 09:20:53
+/* Smarty version 4.3.4, created on 2024-03-29 09:32:44
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\userList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_660679e5a3ebd6_62562954',
+  'unifunc' => 'content_66067cacc94837_39042726',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '310e78e52520a32623aaa03e947b506f8172c5bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\userList.tpl',
-      1 => 1711700452,
+      1 => 1711701082,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660679e5a3ebd6_62562954 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66067cacc94837_39042726 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,6 +38,9 @@ function content_660679e5a3ebd6_62562954 (Smarty_Internal_Template $_smarty_tpl)
     <?php echo '<script'; ?>
  src="./js/enterLog.js" defer><?php echo '</script'; ?>
 >
+    <?php echo '<script'; ?>
+ src="./js/spinner.js" defer><?php echo '</script'; ?>
+>
     <title>User list</title>
 </head>
 <body onload="enterLog(<?php echo $_smarty_tpl->tpl_vars['logsent']->value;?>
@@ -47,7 +50,7 @@ function content_660679e5a3ebd6_62562954 (Smarty_Internal_Template $_smarty_tpl)
     <div class="container">
 
     <div class="leftColumn">
-    <img class="logo" src="./images/logo-white-cropped.png" alt="logo"  width="200" height="100"> 
+    <img class="logo" src="./images/new-logo.png" alt="logo"  width="200" height="auto"> 
     <p class="margins-needed" id="sessionname" data-value="<?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
 ">Welcome <?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
 </p>
@@ -72,57 +75,67 @@ function content_660679e5a3ebd6_62562954 (Smarty_Internal_Template $_smarty_tpl)
     </div>
 
     <div class="rightColumn">
-    <table>
-        <thead class="margins-needed">
-            <tr>
-                <th>First name</th>
-                <th>Last name</th>
-                                <th>E-mail</th>
-                <th>Company</th>
-            </tr>
-        </thead>
-        <tbody class="margins-needed">
-        <?php
+
+        <div class="spinner-container">
+            <div class="spinner"></div>
+        </div>
+
+        <div class="searchBar">
+            <input class="margins-needed" type="number" placeholder="Enter ID" id="id-number">
+            <button class="basic-button" id="searchbtn" onclick="showSpinner()">Search user</button>
+        </div>
+
+        <table>
+            <thead class="margins-needed">
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                                        <th>E-mail</th>
+                    <th>Company</th>
+                </tr>
+            </thead>
+            <tbody class="margins-needed">
+            <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['data']->value, 'user');
 $_smarty_tpl->tpl_vars['user']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['user']->value) {
 $_smarty_tpl->tpl_vars['user']->do_else = false;
 ?> 
-            <?php if (!($_smarty_tpl->tpl_vars['sessionrole']->value == "user" && $_smarty_tpl->tpl_vars['user']->value['role'] == "admin")) {?>
-            <tr> 
-            <?php
+                <?php if (!($_smarty_tpl->tpl_vars['sessionrole']->value == "user" && $_smarty_tpl->tpl_vars['user']->value['role'] == "admin")) {?>
+                <tr> 
+                <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['companydata']->value, 'company');
 $_smarty_tpl->tpl_vars['company']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['company']->value) {
 $_smarty_tpl->tpl_vars['company']->do_else = false;
 ?>
-                <?php if ($_smarty_tpl->tpl_vars['company']->value['id'] == $_smarty_tpl->tpl_vars['user']->value['companyid']) {?>
-                    <?php $_smarty_tpl->_assignInScope('companyname', $_smarty_tpl->tpl_vars['company']->value['name']);?>
+                    <?php if ($_smarty_tpl->tpl_vars['company']->value['id'] == $_smarty_tpl->tpl_vars['user']->value['companyid']) {?>
+                        <?php $_smarty_tpl->_assignInScope('companyname', $_smarty_tpl->tpl_vars['company']->value['name']);?>
+                    <?php }?>
+                <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                    <td><a href="user.php?id=<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
+</td> 
+                    <td><a href="user.php?id=<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['user']->value['surname'];?>
+</td> 
+                                        <td><a href="user.php?id=<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['user']->value['email'];?>
+</a>  
+                    <td><?php echo $_smarty_tpl->tpl_vars['companyname']->value;?>
+</td>
+                    <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?><td><input type="checkbox" form="delete-selected-users" name="checkbox<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
+"/></td><?php }?>
+                <tr> 
                 <?php }?>
             <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                <td><a href="user.php?id=<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
-</td> 
-                <td><a href="user.php?id=<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['user']->value['surname'];?>
-</td> 
-                                <td><a href="user.php?id=<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['user']->value['email'];?>
-</a>  
-                <td><?php echo $_smarty_tpl->tpl_vars['companyname']->value;?>
-</td>
-                <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?><td><input type="checkbox" form="delete-selected-users" name="checkbox<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
-"/></td><?php }?>
-            <tr> 
-            <?php }?>
-        <?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-        </tbody>
-    </table>
-    </div>
+            </tbody>
+        </table>
+        </div>
 
     </div>
     

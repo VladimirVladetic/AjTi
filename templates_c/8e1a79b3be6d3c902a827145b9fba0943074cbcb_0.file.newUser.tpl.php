@@ -38,7 +38,7 @@ function content_660679346d37e9_40172553 (Smarty_Internal_Template $_smarty_tpl)
 
         <div class="leftColumn">
 
-            <img class="margins-needed" src="./images/logo-white-cropped.png" alt="logo"  width="250" height="auto"> 
+            <img class="margins-needed" src="./images/new-logo.png" alt="logo"  width="250" height="auto"> 
             <table>
                 <form class="margins-needed" id="insert-user" method="post" action="newUser.php">
                     <tr><td><input id="info-name" type="text" name="name" placeholder="Enter your name." <?php if ((isset($_smarty_tpl->tpl_vars['name']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['name']->value;?>

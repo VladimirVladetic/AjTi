@@ -29,8 +29,6 @@ h1 {
     grid-column: 1;
     width: 35em;
     height: auto;
-    border: 10px solid black;
-    border-color: black;
     padding-left: 20%;
     padding-top: 0%;
 }

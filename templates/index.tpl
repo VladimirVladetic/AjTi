@@ -15,7 +15,7 @@
 
     <div class="container">
     
-        <img class="logo" src="./images/logo-white.png" alt="Atos logo"  width="200" height="100"> 
+        <img class="logo" src="./images/new-logo.png" alt="Atos logo"  width="200" height="100"> 
         <form id="login-form" method="post" action="index.php" class="login-form-container">
             <h1> USER LOGIN </h1>
             <input id="login-username" type="text" name="username" placeholder="Enter your username."/>

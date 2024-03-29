@@ -18,7 +18,7 @@
 
     <div class="leftColumn">
 
-    <img class="margins-needed" src="./images/logo-white-cropped.png" alt="logo"  width="200" height="auto"> 
+    <img class="margins-needed" src="./images/new-logo.png" alt="logo"  width="200" height="auto"> 
 
         <div id="user-holder" data-value="{$id}"></div>
 

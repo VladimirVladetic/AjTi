@@ -46,7 +46,7 @@ function content_660677a8b02f87_57480177 (Smarty_Internal_Template $_smarty_tpl)
 
     <div class="leftColumn">
 
-    <img class="margins-needed" src="./images/logo-white-cropped.png" alt="logo"  width="200" height="auto"> 
+    <img class="margins-needed" src="./images/new-logo.png" alt="logo"  width="200" height="auto"> 
 
         <div id="user-holder" data-value="<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 "></div>

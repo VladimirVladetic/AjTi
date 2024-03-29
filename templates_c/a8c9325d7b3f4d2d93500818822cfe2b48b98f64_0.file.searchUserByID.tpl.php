@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-20 13:59:55
+/* Smarty version 4.3.4, created on 2024-03-29 09:24:24
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\searchUserByID.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_65faddcb6e4a17_87255040',
+  'unifunc' => 'content_66067ab8c96c93_34454787',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a8c9325d7b3f4d2d93500818822cfe2b48b98f64' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\searchUserByID.tpl',
-      1 => 1709207797,
+      1 => 1711700654,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65faddcb6e4a17_87255040 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66067ab8c96c93_34454787 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/users.css">
+    <link rel="stylesheet" href="./styles/essentials.css">
+    
     <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.6.4.min.js"><?php echo '</script'; ?>
 >
