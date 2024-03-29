@@ -16,7 +16,7 @@
     <div class="container">
 
     <div class="leftColumn">
-    <img class="logo" src="./images/logo-white-cropped.png" alt="Atos logo"  width="200" height="100"> 
+    <img class="logo" src="./images/logo-white-cropped.png" alt="logo"  width="200" height="100"> 
     <p class="margins-needed" id="sessionname" data-value="{$sessionname}">Welcome {$sessionname}</p>
     {* {if $sessionrole=="admin"}<form class="margins-needed" id="go-to-newuser" method="post" action="newUser.php"> 
         <input class="basic-button" type='submit' name='newuserbtn' value='Enter new user.'/>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-22 13:41:54
+/* Smarty version 4.3.4, created on 2024-03-29 08:21:33
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_65fd7c92c6d534_32204625',
+  'unifunc' => 'content_66066bfdda4c48_03779563',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a0da77831dd5fc3b77aa3c8fe4770245592ce60d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\user.tpl',
-      1 => 1711111273,
+      1 => 1711696812,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65fd7c92c6d534_32204625 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66066bfdda4c48_03779563 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +46,7 @@ function content_65fd7c92c6d534_32204625 (Smarty_Internal_Template $_smarty_tpl)
 
     <div class="leftColumn">
 
-    <img class="margins-needed" src="./images/logo-white-cropped.png" alt="Atos logo"  width="200" height="auto"> 
+    <img class="margins-needed" src="./images/logo-white-cropped.png" alt="logo"  width="200" height="auto"> 
 
         <div id="user-holder" data-value="<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 "></div>
@@ -97,9 +97,9 @@ function content_65fd7c92c6d534_32204625 (Smarty_Internal_Template $_smarty_tpl)
 ">
             <input class="basic-button" type='submit' name='deleteuserbtn' value="Delete user"/>
         </form>
-        <form id="go-to-userlist" method="post" action="userList.php"> 
-            <input class="basic-button" type='submit' name='userlist' value='Go to user list'/>
-        </form>
+        <a href="userList.php">
+            <button class="basic-button">Go to user list</button>
+        </a>
 
     </div>
     </div>

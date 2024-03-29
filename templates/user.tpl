@@ -18,7 +18,7 @@
 
     <div class="leftColumn">
 
-    <img class="margins-needed" src="./images/logo-white-cropped.png" alt="Atos logo"  width="200" height="auto"> 
+    <img class="margins-needed" src="./images/logo-white-cropped.png" alt="logo"  width="200" height="auto"> 
 
         <div id="user-holder" data-value="{$id}"></div>
 
@@ -54,9 +54,9 @@
         <form id="delete-this-user" method="post" action="user.php?id={$id}">
             <input class="basic-button" type='submit' name='deleteuserbtn' value="Delete user"/>
         </form>
-        <form id="go-to-userlist" method="post" action="userList.php"> 
-            <input class="basic-button" type='submit' name='userlist' value='Go to user list'/>
-        </form>
+        <a href="userList.php">
+            <button class="basic-button">Go to user list</button>
+        </a>
 
     </div>
     </div>

@@ -25,12 +25,13 @@ $error = false;
 //     exit;
 // }
 
-if((isset($_POST['name']) && $_POST['name'] != "") || (isset($_POST['surname']) && $_POST['surname'] != "") || (isset($_POST['yearofbirth']) && $_POST['yearofbirth'] != "") || (isset($_POST['password']) && $_POST['password'] != "")){
+if((isset($_POST['name']) && $_POST['name'] != "") || (isset($_POST['surname']) && $_POST['surname'] != "") || (isset($_POST['yearofbirth']) && $_POST['yearofbirth'] != "") || (isset($_POST['password']) && $_POST['password'] != "") || (isset($_POST['email']) && $_POST['email'] != "")){
 
     $name = $_POST['name'] ?? '';
     $surname = $_POST['surname'] ?? '';
     $yearofbirth = $_POST['yearofbirth'] ?? '';
     $password = $_POST['password'] ?? '';
+    $email = $_POST['email'] ?? '';
 
     $companyname = $_POST['company'];
 
@@ -54,7 +55,7 @@ if((isset($_POST['name']) && $_POST['name'] != "") || (isset($_POST['surname']) 
     $username = $name . $surname . $id;
 
     if(!$error){
-        $sql = "insert into user(id,username,name,surname,yearofbirth,password,role,companyid)values('$id','$username','$name','$surname','$yearofbirth','$password','$role','$companyid')";
+        $sql = "insert into user(id,username,name,surname,yearofbirth,password,role,email,companyid)values('$id','$username','$name','$surname','$yearofbirth','$password','$role','$email','$companyid')";
         if(mysqli_query($con,$sql)){
             echo "<script>alert('Success!')</script>";
             header("Location: userList.php");
