@@ -1,5 +1,5 @@
 td{
-    font-size: 200%;
+    font-size: 180%;
     padding-top: 0.1em;
     padding-left: 0.5em;
     padding-right: 0.5em;
@@ -8,6 +8,11 @@ td{
 .logo {
     width: 80%;
     height: auto;
+}
+
+.searchBar{
+    display: flex;
+    align-items: left;
 }
 
 .spinner-container {

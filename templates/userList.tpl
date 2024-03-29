@@ -46,7 +46,7 @@
         </div>
 
         <div class="searchBar">
-            <input class="margins-needed" type="number" placeholder="Enter ID" id="id-number">
+            <input class="margins-needed" type="number" placeholder="Search for user with ID" id="id-number">
             <button class="basic-button" id="searchbtn" onclick="showSpinner()">Search user</button>
         </div>
 
@@ -55,7 +55,7 @@
                 <tr>
                     <th>First name</th>
                     <th>Last name</th>
-                    {* <th>Username</th> *}
+                    <th>Username</th>
                     <th>E-mail</th>
                     <th>Company</th>
                 </tr>
@@ -71,7 +71,7 @@
                 {/foreach}
                     <td><a href="user.php?id={$user.id}">{$user.name}</td> 
                     <td><a href="user.php?id={$user.id}">{$user.surname}</td> 
-                    {* <td><a href="user.php?id={$user.id}">{$user.username}</td> *}
+                    <td><a href="user.php?id={$user.id}">{$user.username}</td>
                     <td><a href="user.php?id={$user.id}">{$user.email}</a>  
                     <td>{$companyname}</td>
                     {if $sessionrole=="admin"}<td><input type="checkbox" form="delete-selected-users" name="checkbox{$user.id}"/></td>{/if}
