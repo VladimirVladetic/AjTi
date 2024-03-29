@@ -16,6 +16,8 @@ body{
 
 .basic-button{
     display: block;
+    height: 3em;
+    width: 10em;
     margin: 2% 1%;
     background-color: white; 
     color: black; 

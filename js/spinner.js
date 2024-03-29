@@ -27,7 +27,7 @@ function showSpinner() {
                 window.location.href = 'user.php?id=' + id;
             } else {
                 alert("No such user exists.");
-                window.location.href = "searchUserByID.php"
+                window.location.href = "userList.php"
             }
         }});
 }

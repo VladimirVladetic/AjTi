@@ -15,14 +15,26 @@
 
     <div class="container">
     
-        <img class="logo" src="./images/new-logo.png" alt="Atos logo"  width="200" height="100"> 
-        <form id="login-form" method="post" action="index.php" class="login-form-container">
-            <h1> USER LOGIN </h1>
-            <input id="login-username" type="text" name="username" placeholder="Enter your username."/>
-            <input id="login-password" type="password" name="password" placeholder="Enter your password."/>
-            <input id="login-button" type="submit" name="loginbtn" value="Login"/>
-        </form>
+        <div>
 
+            <img class="logo" src="./images/new-logo.png" alt="Atos logo"  width="200" height="100">    
+
+        </div>
+
+        <div class="rightColumn">
+
+            <form id="login-form" method="post" action="index.php">
+                <h1> USER LOGIN </h1>
+                <input id="login-username" type="text" name="username" placeholder="Enter your username."/>
+                <input id="login-password" type="password" name="password" placeholder="Enter your password."/>
+            </form>
+            <button class="basic-button" form="login-form" id="login-button" name="loginbtn">Login</button>
+            <a id="register-button" href="register.php">
+                    <button class="basic-button" name="rgbtn">Register</button>
+            </a>
+
+        </div>
+        
     </div>
 
     {if $attempts > 1}
