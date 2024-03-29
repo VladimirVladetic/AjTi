@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-29 08:09:25
+/* Smarty version 4.3.4, created on 2024-03-29 09:02:45
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\userList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_66066925b07234_00630248',
+  'unifunc' => 'content_660675a5284982_18175966',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '310e78e52520a32623aaa03e947b506f8172c5bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\userList.tpl',
-      1 => 1711696070,
+      1 => 1711699312,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66066925b07234_00630248 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660675a5284982_18175966 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,17 +51,17 @@ function content_66066925b07234_00630248 (Smarty_Internal_Template $_smarty_tpl)
     <p class="margins-needed" id="sessionname" data-value="<?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
 ">Welcome <?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
 </p>
-        <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
+    <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
         <a href="newUser.php">
             <button class="basic-button">Enter new user</button>
         </a>
     <?php }?>
-        <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
+    <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
         <a href="newCompany.php">
             <button class="basic-button">Enter new company</button>
         </a>
     <?php }?>
-        <a href="searchUserByID.php">
+    <a href="searchUserByID.php">
         <button class="basic-button">Search by ID</button>
     </a>
     <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?> <form class="margins-needed" id="delete-selected-users" method="post" action="userList.php"></form>

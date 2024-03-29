@@ -31,6 +31,10 @@ body{
     margin: 3%;
 }
 
+.margins2-needed{
+    margin: 2%;
+}
+
 a {
     text-decoration: none;
     color: inherit;

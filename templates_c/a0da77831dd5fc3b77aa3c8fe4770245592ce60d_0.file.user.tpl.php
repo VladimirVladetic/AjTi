@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-29 08:21:33
+/* Smarty version 4.3.4, created on 2024-03-29 09:11:20
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_66066bfdda4c48_03779563',
+  'unifunc' => 'content_660677a8b02f87_57480177',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a0da77831dd5fc3b77aa3c8fe4770245592ce60d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\user.tpl',
-      1 => 1711696812,
+      1 => 1711699878,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66066bfdda4c48_03779563 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660677a8b02f87_57480177 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,23 +74,23 @@ function content_66066bfdda4c48_03779563 (Smarty_Internal_Template $_smarty_tpl)
 " <?php }?>>
                 <p>Company: <?php if ((isset($_smarty_tpl->tpl_vars['companyname']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['companyname']->value;?>
  <?php }?></p>
-                <p><?php if ((isset($_smarty_tpl->tpl_vars['role']->value))) {?> Role: <?php echo $_smarty_tpl->tpl_vars['role']->value;?>
+                <p>Role: <?php if ((isset($_smarty_tpl->tpl_vars['role']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['role']->value;?>
  <?php }?></p>
             </form>
             <button class="basic-button" form="update-user-form" id="update-info-button">Update user information</button>
             <button class="basic-button" onclick="openChangeCompanyPopup()">Change company</button>
         <?php }?>
         <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "user") {?>
-            <tr><td>Name: <?php if ((isset($_smarty_tpl->tpl_vars['name']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['name']->value;?>
- <?php }?></td></tr>
-            <tr><td>Surname: <?php if ((isset($_smarty_tpl->tpl_vars['surname']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['surname']->value;?>
- <?php }?></td></tr>
-            <tr><td>Year of birth: <?php if ((isset($_smarty_tpl->tpl_vars['yearofbirth']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['yearofbirth']->value;?>
- <?php }?></td></tr>
-                        <tr><td>Company: <?php if ((isset($_smarty_tpl->tpl_vars['companyname']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['companyname']->value;?>
- <?php }?></td></tr>
-            <tr><td><?php if ((isset($_smarty_tpl->tpl_vars['role']->value))) {?> Role: <?php echo $_smarty_tpl->tpl_vars['role']->value;?>
- <?php }?> </td></tr>
+                    <h2 class="margins2-needed">Name: <?php if ((isset($_smarty_tpl->tpl_vars['name']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+ <?php }?></h2>
+                    <h2 class="margins2-needed">Surname: <?php if ((isset($_smarty_tpl->tpl_vars['surname']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['surname']->value;?>
+ <?php }?></h2>
+                    <h2 class="margins2-needed">Year of birth: <?php if ((isset($_smarty_tpl->tpl_vars['yearofbirth']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['yearofbirth']->value;?>
+ <?php }?></h2>
+                    <h2 class="margins2-needed">Company: <?php if ((isset($_smarty_tpl->tpl_vars['companyname']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['companyname']->value;?>
+ <?php }?></h2>
+                    <h2 class="margins2-needed">Role: <?php if ((isset($_smarty_tpl->tpl_vars['role']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['role']->value;?>
+ <?php }?></h2>
         <?php }?>
             
         <form id="delete-this-user" method="post" action="user.php?id=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>

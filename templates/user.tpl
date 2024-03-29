@@ -37,18 +37,17 @@
                 <p>Password: </p>
                 <input class="input-text" id="info-password" type="text" name="password" placeholder="Enter password."{if isset($password)} value="{$password}" {/if}>
                 <p>Company: {if isset($companyname)} {$companyname} {/if}</p>
-                <p>{if isset($role)} Role: {$role} {/if}</p>
+                <p>Role: {if isset($role)} {$role} {/if}</p>
             </form>
             <button class="basic-button" form="update-user-form" id="update-info-button">Update user information</button>
             <button class="basic-button" onclick="openChangeCompanyPopup()">Change company</button>
         {/if}
         {if $sessionrole=="user"}
-            <tr><td>Name: {if isset($name)} {$name} {/if}</td></tr>
-            <tr><td>Surname: {if isset($surname)} {$surname} {/if}</td></tr>
-            <tr><td>Year of birth: {if isset($yearofbirth)} {$yearofbirth} {/if}</td></tr>
-            {* <tr><td>Password: Hidden</td></tr> *}
-            <tr><td>Company: {if isset($companyname)} {$companyname} {/if}</td></tr>
-            <tr><td>{if isset($role)} Role: {$role} {/if} </td></tr>
+                    <h2 class="margins2-needed">Name: {if isset($name)} {$name} {/if}</h2>
+                    <h2 class="margins2-needed">Surname: {if isset($surname)} {$surname} {/if}</h2>
+                    <h2 class="margins2-needed">Year of birth: {if isset($yearofbirth)} {$yearofbirth} {/if}</h2>
+                    <h2 class="margins2-needed">Company: {if isset($companyname)} {$companyname} {/if}</h2>
+                    <h2 class="margins2-needed">Role: {if isset($role)} {$role} {/if}</h2>
         {/if}
             
         <form id="delete-this-user" method="post" action="user.php?id={$id}">
