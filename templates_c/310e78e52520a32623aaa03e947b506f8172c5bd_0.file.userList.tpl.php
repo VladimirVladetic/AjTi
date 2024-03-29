@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-29 09:17:50
+/* Smarty version 4.3.4, created on 2024-03-29 09:20:53
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\userList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6606792e914bb9_67707703',
+  'unifunc' => 'content_660679e5a3ebd6_62562954',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '310e78e52520a32623aaa03e947b506f8172c5bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\userList.tpl',
-      1 => 1711700250,
+      1 => 1711700452,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6606792e914bb9_67707703 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660679e5a3ebd6_62562954 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,11 +64,11 @@ function content_6606792e914bb9_67707703 (Smarty_Internal_Template $_smarty_tpl)
     <a href="searchUserByID.php">
         <button class="basic-button">Search by ID</button>
     </a>
-    <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?> <form class="margins-needed" id="delete-selected-users" method="post" action="userList.php"></form>
-    <input class="basic-button" form="delete-selected-users" type="submit" name='deleteusersbtn' value="Delete selected users"/>
+    <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?> <form id="delete-selected-users" method="post" action="userList.php"></form>
+        <input class="basic-button" form="delete-selected-users" type="submit" name='deleteusersbtn' value="Delete selected users"/>
     <?php }?>
-    <form class="margins-needed" id="logout" method="post" action="userList.php"></form>
-    <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>
+    <form id="logout" method="post" action="userList.php"></form>
+        <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>
     </div>
 
     <div class="rightColumn">

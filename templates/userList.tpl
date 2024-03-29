@@ -31,11 +31,11 @@
     <a href="searchUserByID.php">
         <button class="basic-button">Search by ID</button>
     </a>
-    {if $sessionrole=="admin"} <form class="margins-needed" id="delete-selected-users" method="post" action="userList.php"></form>
-    <input class="basic-button" form="delete-selected-users" type="submit" name='deleteusersbtn' value="Delete selected users"/>
+    {if $sessionrole=="admin"} <form id="delete-selected-users" method="post" action="userList.php"></form>
+        <input class="basic-button" form="delete-selected-users" type="submit" name='deleteusersbtn' value="Delete selected users"/>
     {/if}
-    <form class="margins-needed" id="logout" method="post" action="userList.php"></form>
-    <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>
+    <form id="logout" method="post" action="userList.php"></form>
+        <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>
     </div>
 
     <div class="rightColumn">
