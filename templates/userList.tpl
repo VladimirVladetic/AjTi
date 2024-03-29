@@ -9,7 +9,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
     <script src="./js/enterLog.js" defer></script>
-    <title>User List</title>
+    <title>User list</title>
 </head>
 <body onload="enterLog({$logsent},{$attempts})">
 

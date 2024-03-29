@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles/essentials.css">
     <link rel="stylesheet" href="./styles/grid1-2.css">
     <link rel="stylesheet" href="./styles/newUser.css">
-    <title>New user</title>
+    <title>New user creation</title>
 </head>
 <body>
 

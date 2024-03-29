@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-29 08:23:34
+/* Smarty version 4.3.4, created on 2024-03-29 09:17:56
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\newUser.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_66066c76542234_47838113',
+  'unifunc' => 'content_660679346d37e9_40172553',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8e1a79b3be6d3c902a827145b9fba0943074cbcb' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\newUser.tpl',
-      1 => 1711697013,
+      1 => 1711700256,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66066c76542234_47838113 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660679346d37e9_40172553 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +30,7 @@ function content_66066c76542234_47838113 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="./styles/essentials.css">
     <link rel="stylesheet" href="./styles/grid1-2.css">
     <link rel="stylesheet" href="./styles/newUser.css">
-    <title>New user</title>
+    <title>New user creation</title>
 </head>
 <body>
 
