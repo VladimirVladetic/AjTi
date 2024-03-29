@@ -34,7 +34,4 @@ function showSpinner() {
 
 function hideSpinner() {
     document.querySelector(".spinner-container").style.display = "none";
-
-    // let spinnercontainer = $(".spinner-container");
-    // spinnercontainer.style.display = "none";
 }
