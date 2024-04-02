@@ -9,7 +9,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
     <script src="./js/enterLog.js" defer></script>
-    <script src="./js/spinner.js" defer></script>
+    <script src="./js/userSearch.js" defer></script>
     <title>User list</title>
 </head>
 <body onload="enterLog({$logsent},{$attempts})">
@@ -46,7 +46,7 @@
         </div>
 
         <div class="searchBar">
-            <input class="margins-needed" type="number" placeholder="Search for user with ID" id="id-number">
+            <input class="margins-needed" type="text" placeholder="Search for user with ID" id="search-value">
             <button id="searchbtn" onclick="showSpinner()">
                 <img class="magglass" src="./images/magnifying-glass-2-64.png" alt="magnifying glass"> 
             </button>

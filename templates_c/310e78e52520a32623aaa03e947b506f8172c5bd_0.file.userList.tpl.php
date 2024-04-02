@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-02 15:21:09
+/* Smarty version 4.3.4, created on 2024-04-02 15:25:11
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\userList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_660c064507ae05_15973208',
+  'unifunc' => 'content_660c0737ed7294_63141700',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '310e78e52520a32623aaa03e947b506f8172c5bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\userList.tpl',
-      1 => 1712064058,
+      1 => 1712064280,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660c064507ae05_15973208 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660c0737ed7294_63141700 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +39,7 @@ function content_660c064507ae05_15973208 (Smarty_Internal_Template $_smarty_tpl)
  src="./js/enterLog.js" defer><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="./js/spinner.js" defer><?php echo '</script'; ?>
+ src="./js/userSearch.js" defer><?php echo '</script'; ?>
 >
     <title>User list</title>
 </head>
@@ -81,7 +81,7 @@ function content_660c064507ae05_15973208 (Smarty_Internal_Template $_smarty_tpl)
         </div>
 
         <div class="searchBar">
-            <input class="margins-needed" type="number" placeholder="Search for user with ID" id="id-number">
+            <input class="margins-needed" type="text" placeholder="Search for user with ID" id="search-value">
             <button id="searchbtn" onclick="showSpinner()">
                 <img class="magglass" src="./images/magnifying-glass-2-64.png" alt="magnifying glass"> 
             </button>
