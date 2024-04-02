@@ -16,8 +16,9 @@ body{
 
 .basic-button{
     display: block;
+    text-align: center;
     height: 3em;
-    width: 10em;
+    width: 11em;
     margin: 2% 1%;
     background-color: white; 
     color: black; 

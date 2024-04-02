@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-29 11:42:12
+/* Smarty version 4.3.4, created on 2024-04-02 15:21:09
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\userList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_66069b044b5707_84172226',
+  'unifunc' => 'content_660c064507ae05_15973208',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '310e78e52520a32623aaa03e947b506f8172c5bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\userList.tpl',
-      1 => 1711708930,
+      1 => 1712064058,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66069b044b5707_84172226 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660c064507ae05_15973208 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,7 +82,9 @@ function content_66069b044b5707_84172226 (Smarty_Internal_Template $_smarty_tpl)
 
         <div class="searchBar">
             <input class="margins-needed" type="number" placeholder="Search for user with ID" id="id-number">
-            <button class="basic-button" id="searchbtn" onclick="showSpinner()">Search user via ID</button>
+            <button id="searchbtn" onclick="showSpinner()">
+                <img class="magglass" src="./images/magnifying-glass-2-64.png" alt="magnifying glass"> 
+            </button>
         </div>
 
         <table>

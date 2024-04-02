@@ -47,7 +47,9 @@
 
         <div class="searchBar">
             <input class="margins-needed" type="number" placeholder="Search for user with ID" id="id-number">
-            <button class="basic-button" id="searchbtn" onclick="showSpinner()">Search user via ID</button>
+            <button id="searchbtn" onclick="showSpinner()">
+                <img class="magglass" src="./images/magnifying-glass-2-64.png" alt="magnifying glass"> 
+            </button>
         </div>
 
         <table>

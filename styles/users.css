@@ -10,9 +10,20 @@ td{
     height: auto;
 }
 
+#searchbtn{
+    background-color: #333333;
+}
+
+.magglass{
+    width: 2em;
+    height: 2em;
+    background-color: #3b3b3b;
+}
+
 .searchBar{
     display: flex;
-    align-items: left;
+    align-items: center;
+    justify-content: left;
 }
 
 .spinner-container {
