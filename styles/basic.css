@@ -20,6 +20,15 @@ h1 {
     grid-template-columns: 1fr 1fr;
 }
 
+#login-title{
+    text-align: center;
+}
+
+#login-form{
+    display: flex;
+    flex-direction: column;
+}
+
 .rightColumn {
     grid-column: 2;
     display: flex;

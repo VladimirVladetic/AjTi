@@ -24,7 +24,7 @@
         <div class="rightColumn">
 
             <form id="login-form" method="post" action="index.php">
-                <h1> USER LOGIN </h1>
+                <h1 id="login-title"> USER LOGIN </h1>
                 <input id="login-username" type="text" name="username" placeholder="Enter your username."/>
                 <input id="login-password" type="password" name="password" placeholder="Enter your password."/>
             </form>
