@@ -4,13 +4,18 @@
     flex-direction: column;
     margin: auto;
     width: 30%;
-    padding: 5px;
+    padding: 2px;
     text-align: center;
+    margin-top: 5%;
 }
 
 input{
     width: 65%;
     padding: 3px 0;
-    margin: 0 auto;
+    margin: 2% auto;
     font-size: 18px;
+}
+
+.central-container button{
+    margin: 5% auto 0px auto;
 }

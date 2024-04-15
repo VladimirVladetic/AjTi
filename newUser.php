@@ -25,7 +25,9 @@ $error = false;
 //     exit;
 // }
 
-if((isset($_POST['name']) && $_POST['name'] != "") || (isset($_POST['surname']) && $_POST['surname'] != "") || (isset($_POST['yearofbirth']) && $_POST['yearofbirth'] != "") || (isset($_POST['password']) && $_POST['password'] != "") || (isset($_POST['email']) && $_POST['email'] != "")){
+if((isset($_POST['name']) && $_POST['name'] != "") 
+    || (isset($_POST['surname']) && $_POST['surname'] != "") || (isset($_POST['yearofbirth']) 
+    && $_POST['yearofbirth'] != "") || (isset($_POST['password']) && $_POST['password'] != "") || (isset($_POST['email']) && $_POST['email'] != "")){
 
     $name = $_POST['name'] ?? '';
     $surname = $_POST['surname'] ?? '';
