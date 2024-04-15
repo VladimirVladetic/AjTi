@@ -13,6 +13,7 @@ $_SESSION['expire'] = $_SESSION['start'] + (300); //5 minutes
 
 $smarty = new Smarty;
 $companyexists = 0;
+$error = 0;
 
 if((isset($_POST['name']) && $_POST['name'] != "") && (isset($_POST['city']) && $_POST['city'] != "") && (isset($_POST['country']) && $_POST['country'] != "")
     && (isset($_POST['sector']) && $_POST['sector'] != "") && (isset($_POST['employerid']) && $_POST['employerid'] != "")){
@@ -27,11 +28,26 @@ if((isset($_POST['name']) && $_POST['name'] != "") && (isset($_POST['city']) && 
     $result = mysqli_query($con, $sql);
     $row = mysqli_fetch_assoc($result);
 
-    if(!$row || $row == null){
+    if($row || $row != null){
         $companyexists = 1;
+        $error = 1;
     }
 
-    
+    $sql = "select max(id) from company";
+    $result = mysqli_query($con,$sql);
+    $row = mysqli_fetch_array($result);
+
+    $id = ($row[0] + 1) ?? '';
+
+    if($error == 0){
+        $sql = "insert into company(id,name,city,country,sector,employerid)values('$id','$name','$city','$country','$sector','$employerid')";
+        if(mysqli_query($con,$sql)){
+            echo "<script>alert('Success!')</script>";
+            header("Location: userList.php");
+        }else{
+            echo "<script>alert('Failure!')</script>";
+        }
+    }
 
 }
 
