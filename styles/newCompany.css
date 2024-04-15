@@ -4,7 +4,7 @@
     flex-direction: column;
     margin: auto;
     width: 30%;
-    padding: 2px;
+    padding: 5px;
     text-align: center;
     margin-top: 5%;
 }
@@ -17,5 +17,5 @@ input{
 }
 
 .central-container button{
-    margin: 5% auto 0px auto;
+    margin: 5% auto 5px auto;
 }

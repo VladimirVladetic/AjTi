@@ -16,13 +16,12 @@ $companyexists = 0;
 $error = 0;
 
 if((isset($_POST['name']) && $_POST['name'] != "") && (isset($_POST['city']) && $_POST['city'] != "") && (isset($_POST['country']) && $_POST['country'] != "")
-    && (isset($_POST['sector']) && $_POST['sector'] != "") && (isset($_POST['employerid']) && $_POST['employerid'] != "")){
+    && (isset($_POST['sector']) && $_POST['sector'] != "")){
     
     $name = $_POST['name'] ?? '';
     $city = $_POST['city'] ?? '';
     $country = $_POST['country'] ?? '';
     $sector = $_POST['sector'] ?? '';
-    $employerid = $_POST['employerid'] ?? '';
 
     $sql = "select * from company where name='$name'";
     $result = mysqli_query($con, $sql);
@@ -40,7 +39,7 @@ if((isset($_POST['name']) && $_POST['name'] != "") && (isset($_POST['city']) && 
     $id = ($row[0] + 1) ?? '';
 
     if($error == 0){
-        $sql = "insert into company(id,name,city,country,sector,employerid)values('$id','$name','$city','$country','$sector','$employerid')";
+        $sql = "insert into company(id,name,city,country,sector)values('$id','$name','$city','$country','$sector')";
         if(mysqli_query($con,$sql)){
             echo "<script>alert('Success!')</script>";
             header("Location: userList.php");

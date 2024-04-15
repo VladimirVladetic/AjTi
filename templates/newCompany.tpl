@@ -32,8 +32,8 @@
                 <label for="input-company-sector">Company sector:</label><br>
                 <input type="text" name="sector" placeholder="Enter company sector" id="input-company-sector"><br>
 
-                <label for="input-company-employerid">Company employer id:</label><br>
-                <input type="int" name="employerid" placeholder="Enter company employer id" id="input-company-employerid"><br>
+                {* <label for="input-company-employerid">Company employer id:</label><br>
+                <input type="int" name="employerid" placeholder="Enter company employer id" id="input-company-employerid"><br> *}
 
             </form>
 

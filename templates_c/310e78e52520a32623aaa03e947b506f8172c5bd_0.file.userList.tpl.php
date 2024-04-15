@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-02 15:25:11
+/* Smarty version 4.3.4, created on 2024-04-15 20:06:11
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\userList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_660c0737ed7294_63141700',
+  'unifunc' => 'content_661d6c93476397_16617713',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '310e78e52520a32623aaa03e947b506f8172c5bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\userList.tpl',
-      1 => 1712064280,
+      1 => 1713204365,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660c0737ed7294_63141700 (Smarty_Internal_Template $_smarty_tpl) {
+function content_661d6c93476397_16617713 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,6 +50,7 @@ function content_660c0737ed7294_63141700 (Smarty_Internal_Template $_smarty_tpl)
     <div class="container">
 
     <div class="leftColumn">
+
     <img class="logo" src="./images/new-logo.png" alt="logo"  width="200" height="auto"> 
     <p class="margins-needed" id="sessionname" data-value="<?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
 ">Welcome <?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
@@ -64,12 +65,12 @@ function content_660c0737ed7294_63141700 (Smarty_Internal_Template $_smarty_tpl)
             <button class="basic-button">Enter new company</button>
         </a>
     <?php }?>
-    <a href="searchUserByID.php">
-        <button class="basic-button">Search by ID</button>
-    </a>
     <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?> <form id="delete-selected-users" method="post" action="userList.php"></form>
         <input class="basic-button" form="delete-selected-users" type="submit" name='deleteusersbtn' value="Delete selected users"/>
     <?php }?>
+    <a href="listings.php">
+        <button class="basic-button">Go to job listings</button>
+    </a>
     <form id="logout" method="post" action="userList.php"></form>
         <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>
     </div>

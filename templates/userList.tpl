@@ -17,6 +17,7 @@
     <div class="container">
 
     <div class="leftColumn">
+
     <img class="logo" src="./images/new-logo.png" alt="logo"  width="200" height="auto"> 
     <p class="margins-needed" id="sessionname" data-value="{$sessionname}">Welcome {$sessionname}</p>
     {if $sessionrole=="admin"}
@@ -29,12 +30,12 @@
             <button class="basic-button">Enter new company</button>
         </a>
     {/if}
-    <a href="searchUserByID.php">
-        <button class="basic-button">Search by ID</button>
-    </a>
     {if $sessionrole=="admin"} <form id="delete-selected-users" method="post" action="userList.php"></form>
         <input class="basic-button" form="delete-selected-users" type="submit" name='deleteusersbtn' value="Delete selected users"/>
     {/if}
+    <a href="listings.php">
+        <button class="basic-button">Go to job listings</button>
+    </a>
     <form id="logout" method="post" action="userList.php"></form>
         <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>
     </div>
