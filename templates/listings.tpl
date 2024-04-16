@@ -37,7 +37,7 @@
         
         </div>
 
-        <div class="rightColumn">
+        <div class="rightColumn2">
 
         {foreach from=$listingdata item=listing} 
             <tr> 
@@ -49,10 +49,21 @@
             {foreach from=$userdata item=user}
                 {if $user.id == $listing.employerid}
                     {$employername = $user.name}
+                    {$employerid = $user.id}
                 {/if}
             {/foreach}
-                <td><a href="user.php?id={$listing.id}">{$listing.name}</td>   
-                <td>{$companyname}</td>
+
+                <div class="listing-container">
+
+                    <h2>
+                        <a href="listing.php?id={$listing.id}">{$listing.name}</a>
+                    </h2>
+                    <p>{$companyname}</p>
+                    <p>
+                        <a href="user.php?id={$employerid}">{$employername}</a>
+                    </p>
+
+                </div>
             <tr> 
         {/foreach}
 

@@ -1,0 +1,14 @@
+.listing-container{
+    border: 5px solid black;
+    width: calc(50% - 20px);
+    box-sizing: border-box; 
+    padding: 5px;
+}
+
+.rightColumn2{
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow-y: auto;
+}
