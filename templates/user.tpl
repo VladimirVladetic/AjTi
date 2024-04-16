@@ -50,9 +50,11 @@
                     <h2 class="margins2-needed">Role: {if isset($role)} {$role} {/if}</h2>
         {/if}
             
+        {if $sessionrole=="admin"}
         <form id="delete-this-user" method="post" action="user.php?id={$id}">
             <input class="basic-button" type='submit' name='deleteuserbtn' value="Delete user"/>
         </form>
+        {/if}
         <a href="userList.php">
             <button class="basic-button">Go to user list</button>
         </a>

@@ -58,10 +58,12 @@
                     <h2>
                         <a href="listing.php?id={$listing.id}">{$listing.name}</a>
                     </h2>
-                    <p>{$companyname}</p>
+                    <p>Company: {$companyname}</p>
                     <p>
-                        <a href="user.php?id={$employerid}">{$employername}</a>
+                        Employer: <a href="user.php?id={$employerid}">{$employername}</a>
                     </p>
+                    <p>Payment: {$listing.payment}</p>
+                    <p>{$listing.smalldesc}</p>
 
                 </div>
             <tr> 

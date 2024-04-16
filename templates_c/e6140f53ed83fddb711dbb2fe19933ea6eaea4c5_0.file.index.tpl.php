@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-02 14:58:31
+/* Smarty version 4.3.4, created on 2024-04-16 11:26:36
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_660c00f76c24d0_79268345',
+  'unifunc' => 'content_661e444ca99360_49674133',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e6140f53ed83fddb711dbb2fe19933ea6eaea4c5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\index.tpl',
-      1 => 1712062654,
+      1 => 1713259594,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660c00f76c24d0_79268345 (Smarty_Internal_Template $_smarty_tpl) {
+function content_661e444ca99360_49674133 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,8 +53,7 @@ function content_660c00f76c24d0_79268345 (Smarty_Internal_Template $_smarty_tpl)
         <div class="rightColumn">
 
             <form id="login-form" method="post" action="index.php">
-                <h1 id="login-title"> USER LOGIN </h1>
-                <input id="login-username" type="text" name="username" placeholder="Enter your username."/>
+                                <input id="login-username" type="text" name="username" placeholder="Enter your username."/>
                 <input id="login-password" type="password" name="password" placeholder="Enter your password."/>
             </form>
             <button class="basic-button" form="login-form" id="login-button" name="loginbtn">Login</button>

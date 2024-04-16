@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-16 10:44:26
+/* Smarty version 4.3.4, created on 2024-04-16 11:39:00
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\listings.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_661e3a6a074506_45009689',
+  'unifunc' => 'content_661e47349edc71_29658284',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ecc889630f5f72af7e79e9ed9996c365d52a20e0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\listings.tpl',
-      1 => 1713257064,
+      1 => 1713260338,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_661e3a6a074506_45009689 (Smarty_Internal_Template $_smarty_tpl) {
+function content_661e47349edc71_29658284 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -108,13 +108,17 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 "><?php echo $_smarty_tpl->tpl_vars['listing']->value['name'];?>
 </a>
                     </h2>
-                    <p><?php echo $_smarty_tpl->tpl_vars['companyname']->value;?>
+                    <p>Company: <?php echo $_smarty_tpl->tpl_vars['companyname']->value;?>
 </p>
                     <p>
-                        <a href="user.php?id=<?php echo $_smarty_tpl->tpl_vars['employerid']->value;?>
+                        Employer: <a href="user.php?id=<?php echo $_smarty_tpl->tpl_vars['employerid']->value;?>
 "><?php echo $_smarty_tpl->tpl_vars['employername']->value;?>
 </a>
                     </p>
+                    <p>Payment: <?php echo $_smarty_tpl->tpl_vars['listing']->value['payment'];?>
+</p>
+                    <p><?php echo $_smarty_tpl->tpl_vars['listing']->value['smalldesc'];?>
+</p>
 
                 </div>
             <tr> 

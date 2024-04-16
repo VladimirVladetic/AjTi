@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-15 19:57:02
+/* Smarty version 4.3.4, created on 2024-04-16 11:38:01
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_661d6a6edb2162_96494293',
+  'unifunc' => 'content_661e46f97974f6_81106181',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a0da77831dd5fc3b77aa3c8fe4770245592ce60d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\user.tpl',
-      1 => 1713203820,
+      1 => 1713260279,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_661d6a6edb2162_96494293 (Smarty_Internal_Template $_smarty_tpl) {
+function content_661e46f97974f6_81106181 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,10 +93,12 @@ function content_661d6a6edb2162_96494293 (Smarty_Internal_Template $_smarty_tpl)
  <?php }?></h2>
         <?php }?>
             
+        <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
         <form id="delete-this-user" method="post" action="user.php?id=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 ">
             <input class="basic-button" type='submit' name='deleteuserbtn' value="Delete user"/>
         </form>
+        <?php }?>
         <a href="userList.php">
             <button class="basic-button">Go to user list</button>
         </a>

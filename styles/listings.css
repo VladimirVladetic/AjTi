@@ -1,6 +1,6 @@
 .listing-container{
     border: 5px solid black;
-    width: calc(47.5%);
+    width: calc(30%);
     box-sizing: border-box; 
     padding: 5px;
 }
@@ -9,7 +9,7 @@
     grid-column: 2;
     display: flex;
     flex-wrap: wrap;
-    gap: 2.5%;
+    gap: 3%;
     overflow-y: auto;
     margin-left: calc(1% - 8em);
 }
