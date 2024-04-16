@@ -11,6 +11,30 @@ if($_SESSION['loggedin'] && !(time() > $_SESSION['expire'])){
 $_SESSION['start'] = time(); 
 $_SESSION['expire'] = $_SESSION['start'] + (300); //5 minutes
 
+$sql = "select * from listing order by id asc";
+
+$result = mysqli_query($con,$sql);
+
+while($row = mysqli_fetch_assoc($result)) {
+    $id[] = $row['id'];
+    $listingdata[] = $row;
+}
+
+$sql = "select * from company";
+
+$result = mysqli_query($con,$sql);
+    
+while($row = mysqli_fetch_assoc($result)) {
+    $companydata[] = $row;
+}
+
+$sql = "select * from user";
+
+$result = mysqli_query($con,$sql);
+    
+while($row = mysqli_fetch_assoc($result)) {
+    $userdata[] = $row;
+}
 
 
 
@@ -18,6 +42,11 @@ mysqli_close($con);
 
 $smarty->assign('sessionrole', $_SESSION['role']);
 $smarty->assign('sessionname', $_SESSION['name']);
+
+$smarty->assign('companydata', $companydata); 
+$smarty->assign('userdata', $userdata);
+$smarty->assign('listingdata', $listingdata);
+
 $smarty->display('listings.tpl'); 
 
 }else{
