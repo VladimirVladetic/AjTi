@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-16 11:39:00
+/* Smarty version 4.3.4, created on 2024-04-16 12:09:47
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\listings.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_661e47349edc71_29658284',
+  'unifunc' => 'content_661e4e6b1953d9_83666416',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ecc889630f5f72af7e79e9ed9996c365d52a20e0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\listings.tpl',
-      1 => 1713260338,
+      1 => 1713262184,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_661e47349edc71_29658284 (Smarty_Internal_Template $_smarty_tpl) {
+function content_661e4e6b1953d9_83666416 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,7 +62,7 @@ function content_661e47349edc71_29658284 (Smarty_Internal_Template $_smarty_tpl)
                 <button class="basic-button">User list</button>
             </a>
             <form id="logout" method="post" action="userList.php"></form>
-                <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>
+            <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>
         
         </div>
 
@@ -115,7 +115,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 "><?php echo $_smarty_tpl->tpl_vars['employername']->value;?>
 </a>
                     </p>
-                    <p>Payment: <?php echo $_smarty_tpl->tpl_vars['listing']->value['payment'];?>
+                    <p>Payment in euros: <?php echo $_smarty_tpl->tpl_vars['listing']->value['payment'];?>
 </p>
                     <p><?php echo $_smarty_tpl->tpl_vars['listing']->value['smalldesc'];?>
 </p>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-03-29 09:17:56
+/* Smarty version 4.3.4, created on 2024-04-16 12:13:11
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\newUser.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_660679346d37e9_40172553',
+  'unifunc' => 'content_661e4f371651e3_31357033',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8e1a79b3be6d3c902a827145b9fba0943074cbcb' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\newUser.tpl',
-      1 => 1711700256,
+      1 => 1713262017,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660679346d37e9_40172553 (Smarty_Internal_Template $_smarty_tpl) {
+function content_661e4f371651e3_31357033 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,7 +70,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </form>
                 </table>
             <button class="basic-button" form="insert-user" id="enter-info-button">Enter Information</button>
-            <a href="userList.php">
+            <a href="userList.php" class="button-link">
                 <button class="basic-button">Go to user list</button>
             </a>
 

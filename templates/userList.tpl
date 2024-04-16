@@ -33,7 +33,7 @@
     {if $sessionrole=="admin"} <form id="delete-selected-users" method="post" action="userList.php"></form>
         <input class="basic-button" form="delete-selected-users" type="submit" name='deleteusersbtn' value="Delete selected users"/>
     {/if}
-    <a href="listings.php">
+    <a href="listings.php" class="button-link">
         <button class="basic-button">Job listings</button>
     </a>
     <form id="logout" method="post" action="userList.php"></form>

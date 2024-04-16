@@ -33,7 +33,7 @@
                 <button class="basic-button">User list</button>
             </a>
             <form id="logout" method="post" action="userList.php"></form>
-                <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>
+            <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>
         
         </div>
 
@@ -62,7 +62,7 @@
                     <p>
                         Employer: <a href="user.php?id={$employerid}">{$employername}</a>
                     </p>
-                    <p>Payment: {$listing.payment}</p>
+                    <p>Payment in euros: {$listing.payment}</p>
                     <p>{$listing.smalldesc}</p>
 
                 </div>

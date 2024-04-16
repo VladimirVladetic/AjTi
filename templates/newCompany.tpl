@@ -41,7 +41,7 @@
 
                 <button class="basic-button" form="insert-company-form" id="enter-info-button">Enter Information</button>
 
-                <a href="userList.php">
+                <a href="userList.php" class="button-link">
                     <button class="basic-button">Go to user list</button>
                 </a>
 

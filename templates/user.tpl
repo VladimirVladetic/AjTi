@@ -55,8 +55,11 @@
             <input class="basic-button" type='submit' name='deleteuserbtn' value="Delete user"/>
         </form>
         {/if}
-        <a href="userList.php">
+        <a href="userList.php" class="button-link">
             <button class="basic-button">Go to user list</button>
+        </a>
+        <a href="listings.php" class="button-link">
+                <button class="basic-button">Job listings</button>
         </a>
 
     </div>

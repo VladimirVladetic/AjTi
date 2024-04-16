@@ -33,7 +33,7 @@
                 </form>
                 </table>
             <button class="basic-button" form="insert-user" id="enter-info-button">Enter Information</button>
-            <a href="userList.php">
+            <a href="userList.php" class="button-link">
                 <button class="basic-button">Go to user list</button>
             </a>
 

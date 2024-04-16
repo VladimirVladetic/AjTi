@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-16 09:03:38
+/* Smarty version 4.3.4, created on 2024-04-16 12:09:52
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\newCompany.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_661e22ca55f910_69346095',
+  'unifunc' => 'content_661e4e70aa4644_29193928',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '36fd206ce08989b5a85da599206c40e21f859043' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\newCompany.tpl',
-      1 => 1713251014,
+      1 => 1713262026,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_661e22ca55f910_69346095 (Smarty_Internal_Template $_smarty_tpl) {
+function content_661e4e70aa4644_29193928 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,7 +66,7 @@ function content_661e22ca55f910_69346095 (Smarty_Internal_Template $_smarty_tpl)
 
                 <button class="basic-button" form="insert-company-form" id="enter-info-button">Enter Information</button>
 
-                <a href="userList.php">
+                <a href="userList.php" class="button-link">
                     <button class="basic-button">Go to user list</button>
                 </a>
 
