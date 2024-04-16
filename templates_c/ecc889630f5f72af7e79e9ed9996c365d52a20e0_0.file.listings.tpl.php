@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-16 10:35:47
+/* Smarty version 4.3.4, created on 2024-04-16 10:44:26
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\listings.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_661e3863d4e2b4_74970670',
+  'unifunc' => 'content_661e3a6a074506_45009689',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ecc889630f5f72af7e79e9ed9996c365d52a20e0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\listings.tpl',
-      1 => 1713256525,
+      1 => 1713257064,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_661e3863d4e2b4_74970670 (Smarty_Internal_Template $_smarty_tpl) {
+function content_661e3a6a074506_45009689 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,7 +66,7 @@ function content_661e3863d4e2b4_74970670 (Smarty_Internal_Template $_smarty_tpl)
         
         </div>
 
-        <div class="rightColumn2">
+        <div class="rightColumnListings">
 
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listingdata']->value, 'listing');

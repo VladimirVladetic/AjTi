@@ -37,7 +37,7 @@
         
         </div>
 
-        <div class="rightColumn2">
+        <div class="rightColumnListings">
 
         {foreach from=$listingdata item=listing} 
             <tr> 
