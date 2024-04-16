@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-15 20:06:11
+/* Smarty version 4.3.4, created on 2024-04-16 09:10:04
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\userList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_661d6c93476397_16617713',
+  'unifunc' => 'content_661e244c6be063_29142141',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '310e78e52520a32623aaa03e947b506f8172c5bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\userList.tpl',
-      1 => 1713204365,
+      1 => 1713251064,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_661d6c93476397_16617713 (Smarty_Internal_Template $_smarty_tpl) {
+function content_661e244c6be063_29142141 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,7 +69,7 @@ function content_661d6c93476397_16617713 (Smarty_Internal_Template $_smarty_tpl)
         <input class="basic-button" form="delete-selected-users" type="submit" name='deleteusersbtn' value="Delete selected users"/>
     <?php }?>
     <a href="listings.php">
-        <button class="basic-button">Go to job listings</button>
+        <button class="basic-button">Job listings</button>
     </a>
     <form id="logout" method="post" action="userList.php"></form>
         <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>
