@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-16 12:09:49
+/* Smarty version 4.3.4, created on 2024-04-16 12:27:42
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\userList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_661e4e6d0be5f0_98001182',
+  'unifunc' => 'content_661e529e9f23e2_39008131',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '310e78e52520a32623aaa03e947b506f8172c5bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\userList.tpl',
-      1 => 1713262152,
+      1 => 1713263260,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_661e4e6d0be5f0_98001182 (Smarty_Internal_Template $_smarty_tpl) {
+function content_661e529e9f23e2_39008131 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +51,7 @@ function content_661e4e6d0be5f0_98001182 (Smarty_Internal_Template $_smarty_tpl)
 
     <div class="leftColumn">
 
-    <img class="logo" src="./images/new-logo.png" alt="logo"  width="200" height="auto"> 
+    <img class="logo" src="./images/AT4.png" alt="logo"  width="150" height="auto"> 
     <p class="margins-needed" id="sessionname" data-value="<?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
 ">Welcome <?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
 </p>

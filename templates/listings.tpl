@@ -17,7 +17,7 @@
 
         <div class="leftColumn">
 
-            <img class="logo" src="./images/new-logo.png" alt="logo"  width="200" height="auto"> 
+            <img class="logo" src="./images/AT4.png" alt="logo"> 
             <p class="margins-needed" id="sessionname" data-value="{$sessionname}">Welcome {$sessionname}</p>
             {if $sessionrole=="admin"}
                 <a href="newUser.php">

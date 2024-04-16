@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-16 12:13:11
+/* Smarty version 4.3.4, created on 2024-04-16 12:29:58
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\newUser.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_661e4f371651e3_31357033',
+  'unifunc' => 'content_661e5326735e16_06238276',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8e1a79b3be6d3c902a827145b9fba0943074cbcb' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\newUser.tpl',
-      1 => 1713262017,
+      1 => 1713263392,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_661e4f371651e3_31357033 (Smarty_Internal_Template $_smarty_tpl) {
+function content_661e5326735e16_06238276 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +38,7 @@ function content_661e4f371651e3_31357033 (Smarty_Internal_Template $_smarty_tpl)
 
         <div class="leftColumn">
 
-            <img class="margins-needed" src="./images/new-logo.png" alt="logo"  width="250" height="auto"> 
+            <img class="margins-needed" src="./images/AT4.png" alt="logo"  width="250" height="auto"> 
             <table>
                 <form class="margins-needed" id="insert-user" method="post" action="newUser.php">
                     <tr><td><input id="info-name" type="text" name="name" placeholder="Enter your name." <?php if ((isset($_smarty_tpl->tpl_vars['name']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['name']->value;?>

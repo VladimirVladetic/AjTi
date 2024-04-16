@@ -15,7 +15,7 @@
 
         <div class="leftColumn">
 
-            <img class="margins-needed" src="./images/new-logo.png" alt="logo"  width="250" height="auto"> 
+            <img class="margins-needed" src="./images/AT4.png" alt="logo"  width="250" height="auto"> 
             <table>
                 <form class="margins-needed" id="insert-user" method="post" action="newUser.php">
                     <tr><td><input id="info-name" type="text" name="name" placeholder="Enter your name." {if isset($name)} value="{$name}" {/if}></td></tr>
