@@ -6,7 +6,8 @@
     width: 30%;
     padding: 5px;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 10%;
+    margin-bottom: 5%;
 }
 
 input{
@@ -18,4 +19,8 @@ input{
 
 .central-container button{
     margin: 5% auto 5px auto;
+}
+
+.button-container{
+    margin-bottom: 5%;
 }

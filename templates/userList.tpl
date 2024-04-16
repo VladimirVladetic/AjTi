@@ -34,7 +34,7 @@
         <input class="basic-button" form="delete-selected-users" type="submit" name='deleteusersbtn' value="Delete selected users"/>
     {/if}
     <a href="listings.php">
-        <button class="basic-button">Go to job listings</button>
+        <button class="basic-button">Job listings</button>
     </a>
     <form id="logout" method="post" action="userList.php"></form>
         <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>

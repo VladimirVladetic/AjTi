@@ -13,6 +13,7 @@ $_SESSION['expire'] = $_SESSION['start'] + (300); //5 minutes
 
 $smarty = new Smarty;
 $companyexists = 0;
+$invalidInfo = 0;
 $error = 0;
 
 if((isset($_POST['name']) && $_POST['name'] != "") && (isset($_POST['city']) && $_POST['city'] != "") && (isset($_POST['country']) && $_POST['country'] != "")
@@ -41,15 +42,21 @@ if((isset($_POST['name']) && $_POST['name'] != "") && (isset($_POST['city']) && 
     if($error == 0){
         $sql = "insert into company(id,name,city,country,sector)values('$id','$name','$city','$country','$sector')";
         if(mysqli_query($con,$sql)){
-            echo "<script>alert('Success!')</script>";
+            // echo "<script>alert('Success!')</script>";
+
             header("Location: userList.php");
         }else{
-            echo "<script>alert('Failure!')</script>";
+            // echo "<script>alert('Failure!')</script>";
+            $invalidInfo = 1;
         }
     }
-
+}
+else{
+    $invalidInfo = 1;
 }
 
+
+$smarty->assign('invalidInfo', $invalidInfo);
 $smarty->assign('companyexists', $companyexists);
 $smarty->assign('sessionrole', $_SESSION['role']);
 

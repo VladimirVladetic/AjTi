@@ -37,11 +37,15 @@
 
             </form>
 
-            <button class="basic-button" form="insert-company-form" id="enter-info-button">Enter Information</button>
+            <div class="button-container">
 
-            <a href="userList.php">
-                <button class="basic-button">Go to user list</button>
-            </a>
+                <button class="basic-button" form="insert-company-form" id="enter-info-button">Enter Information</button>
+
+                <a href="userList.php">
+                    <button class="basic-button">Go to user list</button>
+                </a>
+
+            </div>
 
         {/if}
 
@@ -51,6 +55,13 @@
         <div class="alert" id="failAlert" style="display: block;">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
             <p class="alertText">Company exists in database.</p>
+        </div> 
+    {/if}
+
+    {if $invalidInfo == 1}
+        <div class="alert" id="failAlert" style="display: block;">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <p class="alertText">Enter all company information.</p>
         </div> 
     {/if}
 
