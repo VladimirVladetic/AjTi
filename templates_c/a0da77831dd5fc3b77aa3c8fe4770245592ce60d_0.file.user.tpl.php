@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-16 12:14:20
+/* Smarty version 4.3.4, created on 2024-04-17 19:33:45
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_661e4f7c63fb55_66759870',
+  'unifunc' => 'content_662007f9e8caf0_35292605',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a0da77831dd5fc3b77aa3c8fe4770245592ce60d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\user.tpl',
-      1 => 1713261964,
+      1 => 1713375220,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_661e4f7c63fb55_66759870 (Smarty_Internal_Template $_smarty_tpl) {
+function content_662007f9e8caf0_35292605 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,6 +107,16 @@ function content_661e4f7c63fb55_66759870 (Smarty_Internal_Template $_smarty_tpl)
         </a>
 
     </div>
+
+    <div class="rightColumn">
+
+        <h1>User CV:</h1>
+
+        <iframe id="pdfViewer" src="viewer.php?file=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
+.pdf"></iframe>
+
+    </div>
+
     </div>
 
     <div class="overlay" id="overlay"></div>

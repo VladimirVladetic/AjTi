@@ -63,6 +63,15 @@
         </a>
 
     </div>
+
+    <div class="rightColumn">
+
+        <h1>User CV:</h1>
+
+        <iframe id="pdfViewer" src="viewer.php?file={$id}.pdf"></iframe>
+
+    </div>
+
     </div>
 
     <div class="overlay" id="overlay"></div>

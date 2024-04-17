@@ -45,3 +45,9 @@ p{
     border: none;
     cursor: pointer;
 }
+
+#pdfViewer {
+    width: 90%;
+    height: 600px;
+    border: 5px solid black;
+}
