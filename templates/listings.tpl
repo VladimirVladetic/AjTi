@@ -50,6 +50,7 @@
                 {if $user.id == $listing.employerid}
                     {$employername = $user.name}
                     {$employerid = $user.id}
+                    {$employersurname = $user.surname}
                 {/if}
             {/foreach}
 
@@ -60,7 +61,7 @@
                     </h2>
                     <p>Company: {$companyname}</p>
                     <p>
-                        Employer: <a href="user.php?id={$employerid}">{$employername}</a>
+                        Employer: <a href="user.php?id={$employerid}">{$employername} {$employersurname}</a>
                     </p>
                     <p>Payment in euros: {$listing.payment}</p>
                     <p>{$listing.smalldesc}</p>

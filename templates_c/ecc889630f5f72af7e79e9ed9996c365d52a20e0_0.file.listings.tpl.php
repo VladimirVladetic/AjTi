@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-16 12:28:54
+/* Smarty version 4.3.4, created on 2024-04-18 14:37:11
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\listings.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_661e52e6296923_08644642',
+  'unifunc' => 'content_662113f7391384_56540022',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ecc889630f5f72af7e79e9ed9996c365d52a20e0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\listings.tpl',
-      1 => 1713263294,
+      1 => 1713443826,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_661e52e6296923_08644642 (Smarty_Internal_Template $_smarty_tpl) {
+function content_662113f7391384_56540022 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,6 +96,7 @@ $_smarty_tpl->tpl_vars['user']->do_else = false;
                 <?php if ($_smarty_tpl->tpl_vars['user']->value['id'] == $_smarty_tpl->tpl_vars['listing']->value['employerid']) {?>
                     <?php $_smarty_tpl->_assignInScope('employername', $_smarty_tpl->tpl_vars['user']->value['name']);?>
                     <?php $_smarty_tpl->_assignInScope('employerid', $_smarty_tpl->tpl_vars['user']->value['id']);?>
+                    <?php $_smarty_tpl->_assignInScope('employersurname', $_smarty_tpl->tpl_vars['user']->value['surname']);?>
                 <?php }?>
             <?php
 }
@@ -113,6 +114,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <p>
                         Employer: <a href="user.php?id=<?php echo $_smarty_tpl->tpl_vars['employerid']->value;?>
 "><?php echo $_smarty_tpl->tpl_vars['employername']->value;?>
+ <?php echo $_smarty_tpl->tpl_vars['employersurname']->value;?>
 </a>
                     </p>
                     <p>Payment in euros: <?php echo $_smarty_tpl->tpl_vars['listing']->value['payment'];?>
