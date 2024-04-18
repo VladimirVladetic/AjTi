@@ -65,7 +65,7 @@
             </thead>
             <tbody class="margins-needed">
             {foreach from=$data item=user} 
-                {if !($sessionrole=="user" && $user.role=="admin")}
+                {* {if !($sessionrole=="user" && $user.role=="admin")} *}
                 <tr> 
                 {foreach from=$companydata item=company}
                     {if $company.id == $user.companyid}
@@ -79,7 +79,7 @@
                     <td>{$companyname}</td>
                     {if $sessionrole=="admin"}<td><input type="checkbox" form="delete-selected-users" name="checkbox{$user.id}"/></td>{/if}
                 <tr> 
-                {/if}
+                {* {/if} *}
             {/foreach}
             </tbody>
         </table>
