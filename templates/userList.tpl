@@ -51,13 +51,13 @@
             <button id="searchbtn" onclick="showSpinner()">
                 <img class="magglass" src="./images/magnifying-glass-2-64.png" alt="magnifying glass"> 
             </button>
-            
+
         </div>
 
         <table>
             <thead class="margins-needed">
                 <tr>
-                    <th>First name</th>
+                    {* <th>First name</th> *}
                     <th>Last name</th>
                     <th>Username</th>
                     <th>E-mail</th>
@@ -73,7 +73,7 @@
                         {$companyname = $company.name}
                     {/if}
                 {/foreach}
-                    <td><a href="user.php?id={$user.id}">{$user.name}</td> 
+                    {* <td><a href="user.php?id={$user.id}">{$user.name}</td>  *}
                     <td><a href="user.php?id={$user.id}">{$user.surname}</td> 
                     <td><a href="user.php?id={$user.id}">{$user.username}</td>
                     <td><a href="user.php?id={$user.id}">{$user.email}</a>  

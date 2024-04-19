@@ -46,7 +46,7 @@
                         <option value="{$company.name}">{$company.name}</option>
                     {/foreach}
                 </select>
-                <button id="searchbtn" onclick="showSpinner()">
+                <button id="searchbtn">
                     <img class="magglass" src="./images/magnifying-glass-2-64.png" alt="magnifying glass"> 
                 </button>
             </div>
