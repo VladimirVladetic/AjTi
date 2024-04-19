@@ -37,39 +37,55 @@
         
         </div>
 
+
         <div class="rightColumnListings">
 
-        {foreach from=$listingdata item=listing} 
-            <tr> 
-            {foreach from=$companydata item=company}
-                {if $company.id == $listing.companyid}
-                    {$companyname = $company.name}
-                {/if}
+            <div class="searchBar">
+                <select name="company" id="info-company">
+                    {foreach from=$companydata item=company} 
+                        <option value="{$company.name}">{$company.name}</option>
+                    {/foreach}
+                </select>
+                <button id="searchbtn" onclick="showSpinner()">
+                    <img class="magglass" src="./images/magnifying-glass-2-64.png" alt="magnifying glass"> 
+                </button>
+            </div>
+
+            <div class="listingsList">
+            
+            {foreach from=$listingdata item=listing} 
+                <tr> 
+                {foreach from=$companydata item=company}
+                    {if $company.id == $listing.companyid}
+                        {$companyname = $company.name}
+                    {/if}
+                {/foreach}
+                {foreach from=$userdata item=user}
+                    {if $user.id == $listing.employerid}
+                        {$employername = $user.name}
+                        {$employerid = $user.id}
+                        {$employersurname = $user.surname}
+                    {/if}
+                {/foreach}
+
+                    <div class="listing-container">
+
+                        <h2>
+                            <a href="listing.php?id={$listing.id}">{$listing.name}</a>
+                        </h2>
+                        <p>Company: {$companyname}</p>
+                        <p>
+                            Employer: <a href="user.php?id={$employerid}">{$employername} {$employersurname}</a>
+                        </p>
+                        <p>Payment in euros: {$listing.payment}</p>
+                        <p>{$listing.smalldesc}</p>
+
+                    </div>
+                <tr> 
             {/foreach}
-            {foreach from=$userdata item=user}
-                {if $user.id == $listing.employerid}
-                    {$employername = $user.name}
-                    {$employerid = $user.id}
-                    {$employersurname = $user.surname}
-                {/if}
-            {/foreach}
 
-                <div class="listing-container">
-
-                    <h2>
-                        <a href="listing.php?id={$listing.id}">{$listing.name}</a>
-                    </h2>
-                    <p>Company: {$companyname}</p>
-                    <p>
-                        Employer: <a href="user.php?id={$employerid}">{$employername} {$employersurname}</a>
-                    </p>
-                    <p>Payment in euros: {$listing.payment}</p>
-                    <p>{$listing.smalldesc}</p>
-
-                </div>
-            <tr> 
-        {/foreach}
-
+            </div>
+        
         </div>
 
     </div>

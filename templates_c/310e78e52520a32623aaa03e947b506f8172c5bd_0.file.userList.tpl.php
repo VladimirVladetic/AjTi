@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-18 11:37:37
+/* Smarty version 4.3.4, created on 2024-04-19 10:11:29
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\userList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6620e9e1419d56_90467872',
+  'unifunc' => 'content_66222731b2af59_75741183',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '310e78e52520a32623aaa03e947b506f8172c5bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\userList.tpl',
-      1 => 1713433049,
+      1 => 1713514265,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6620e9e1419d56_90467872 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66222731b2af59_75741183 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,6 +86,7 @@ function content_6620e9e1419d56_90467872 (Smarty_Internal_Template $_smarty_tpl)
             <button id="searchbtn" onclick="showSpinner()">
                 <img class="magglass" src="./images/magnifying-glass-2-64.png" alt="magnifying glass"> 
             </button>
+            
         </div>
 
         <table>

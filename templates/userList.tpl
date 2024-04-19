@@ -51,6 +51,7 @@
             <button id="searchbtn" onclick="showSpinner()">
                 <img class="magglass" src="./images/magnifying-glass-2-64.png" alt="magnifying glass"> 
             </button>
+            
         </div>
 
         <table>

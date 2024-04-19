@@ -7,10 +7,27 @@
 }
 
 .rightColumnListings{
-    grid-column: 2;
+    grid-column: 2; 
+    margin-left: calc(1% - 8em);
+}
+
+#info-company{
+    margin-right: 1%;
+}
+
+#searchbtn{
+    background-color: #3b3b3b;
+}
+
+.magglass{
+    width: 2em;
+    height: 2em;
+    background-color: #3b3b3b;
+}
+
+.listingsList{
     display: flex;
     flex-wrap: wrap;
     gap: 3%;
     overflow-y: auto;
-    margin-left: calc(1% - 8em);
 }
