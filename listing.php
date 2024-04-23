@@ -19,13 +19,28 @@ if(isset($_GET['id'])){
     $row = mysqli_fetch_assoc($result);
 
     $name = $row['name'];
-    $surname = $row['surname'];
-    $yearofbirth = $row['yearofbirth'];
-    $password = $row['password'];
-    $role = $row['role'];
+    $smalldesc = $row['smalldesc'];
+    $info = $row['info'];
+    $employerid = $row['employerid'];
     $companyid = $row['companyid'];
-    $username = $row['username'];
-    $email = $row['email'];
+    $payment = $row['payment'];
+
+    $sql = "select * from user where id=$employerid";
+    $result = mysqli_query($con, $sql);
+    $row = mysqli_fetch_assoc($result);
+
+    $employername = $row['name'];
+    $employersurname = $row['surname'];
+    $employerusername = $row['username'];
+    $employeremail = $row['email'];
+
+    $sql = "select * from company where id=$companyid";
+    $result = mysqli_query($con, $sql);
+    $row = mysqli_fetch_assoc($result);
+
+    $companyname = $row['name'];
+    $companysector = $row['sector'];
+    $companycity = $row['city'];
 
 }
 
@@ -33,17 +48,22 @@ mysqli_close($con);
 
 $smarty->assign('id',$id);
 $smarty->assign('name',$name);
-$smarty->assign('surname',$surname);
-$smarty->assign('yearofbirth',$yearofbirth);
-$smarty->assign('password',$password);
-$smarty->assign('username',$username);
-$smarty->assign('email',$email);
-$smarty->assign('role',$role);
+$smarty->assign('smalldesc',$smalldesc);
+$smarty->assign('info',$info);
+$smarty->assign('employerid',$employerid);
+$smarty->assign('companyid',$companyid);
+$smarty->assign('payment',$payment);
 $smarty->assign('companyname',$companyname);
-$smarty->assign('sessionrole',$_SESSION['role']);
-$smarty->assign('companies',$companies);
+$smarty->assign('companycity',$companycity);
+$smarty->assign('companysector',$companysector);
+$smarty->assign('employername',$employername);
+$smarty->assign('employersurname',$employersurname);
+$smarty->assign('employerusername',$employerusername);
+$smarty->assign('employeremail',$employeremail);
 
-$smarty->display('user.tpl'); 
+$smarty->assign('sessionrole',$_SESSION['role']);
+
+$smarty->display('listing.tpl'); 
 }
 else{
     session_destroy();

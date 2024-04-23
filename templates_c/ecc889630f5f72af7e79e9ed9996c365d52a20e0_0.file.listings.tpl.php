@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-19 10:11:32
+/* Smarty version 4.3.4, created on 2024-04-23 12:10:11
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\listings.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_662227349db0a1_50907449',
+  'unifunc' => 'content_6627890380ce34_35458712',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ecc889630f5f72af7e79e9ed9996c365d52a20e0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\listings.tpl',
-      1 => 1713514280,
+      1 => 1713516284,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_662227349db0a1_50907449 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6627890380ce34_35458712 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,7 +84,7 @@ $_smarty_tpl->tpl_vars['company']->do_else = false;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </select>
-                <button id="searchbtn" onclick="showSpinner()">
+                <button id="searchbtn">
                     <img class="magglass" src="./images/magnifying-glass-2-64.png" alt="magnifying glass"> 
                 </button>
             </div>
