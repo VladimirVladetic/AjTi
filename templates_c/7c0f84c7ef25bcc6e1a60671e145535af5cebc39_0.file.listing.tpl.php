@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-23 15:48:19
+/* Smarty version 4.3.4, created on 2024-04-23 15:59:15
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\listing.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6627bc2350fdb7_51807556',
+  'unifunc' => 'content_6627beb38f2255_68736647',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7c0f84c7ef25bcc6e1a60671e145535af5cebc39' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\listing.tpl',
-      1 => 1713880098,
+      1 => 1713880753,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6627bc2350fdb7_51807556 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6627beb38f2255_68736647 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,7 +56,35 @@ function content_6627bc2350fdb7_51807556 (Smarty_Internal_Template $_smarty_tpl)
 
         <div class="rightColumn">
 
+            <div class="box">
 
+                <h1><?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+</h1>
+                <h2>Listing information</h2>
+                <h3>Job description:</h3>
+                <p><?php echo $_smarty_tpl->tpl_vars['info']->value;?>
+</p>
+                <p><strong>Payment:</strong> <?php echo $_smarty_tpl->tpl_vars['payment']->value;?>
+</p>
+
+                <h3>Company information</h3>
+                <p><strong>Name:</strong> <?php echo $_smarty_tpl->tpl_vars['companyname']->value;?>
+</p>
+                <p><strong>City:</strong> <?php echo $_smarty_tpl->tpl_vars['companycity']->value;?>
+</p>
+                <p><strong>Sector:</strong> <?php echo $_smarty_tpl->tpl_vars['companysector']->value;?>
+</p>
+
+                <h3>Employer information</h3>
+                <p><strong>Full name:</strong> <?php echo $_smarty_tpl->tpl_vars['employersurname']->value;?>
+, <?php echo $_smarty_tpl->tpl_vars['employername']->value;?>
+</p>
+                <p><strong>Username:</strong> <?php echo $_smarty_tpl->tpl_vars['employerusername']->value;?>
+</p> 
+                <p><strong>Email:</strong> <?php echo $_smarty_tpl->tpl_vars['employeremail']->value;?>
+</p>
+
+            </div>
 
         </div>
 

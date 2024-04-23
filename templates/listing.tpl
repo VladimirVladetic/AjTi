@@ -29,7 +29,25 @@
 
         <div class="rightColumn">
 
+            <div class="box">
 
+                <h1>{$name}</h1>
+                <h2>Listing information</h2>
+                <h3>Job description:</h3>
+                <p>{$info}</p>
+                <p><strong>Payment:</strong> {$payment}</p>
+
+                <h3>Company information</h3>
+                <p><strong>Name:</strong> {$companyname}</p>
+                <p><strong>City:</strong> {$companycity}</p>
+                <p><strong>Sector:</strong> {$companysector}</p>
+
+                <h3>Employer information</h3>
+                <p><strong>Full name:</strong> {$employersurname}, {$employername}</p>
+                <p><strong>Username:</strong> {$employerusername}</p> 
+                <p><strong>Email:</strong> {$employeremail}</p>
+
+            </div>
 
         </div>
 

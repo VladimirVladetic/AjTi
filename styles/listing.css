@@ -1,0 +1,24 @@
+.box{
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 60%;
+    padding: 3px;
+    text-align: left;
+    margin-top: 1%;
+}
+
+.box p{
+    margin: 1% 2%;
+}
+
+.box h3{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 0.5%;
+}
+
+.box h1,h2{
+    margin: 2.5% 0.2%;
+}
