@@ -6,8 +6,10 @@
     <link rel="stylesheet" href="./styles/listings.css">
     <link rel="stylesheet" href="./styles/essentials.css">
     <link rel="stylesheet" href="./styles/grid1-2.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+    <script src="./js/essentials.js" defer></script>
+    <script src="./js/listings.js" defer></script>
     <title>Job listings</title>
 </head>
 
@@ -20,18 +22,12 @@
             <img class="logo" src="./images/AT4.png" alt="logo"> 
             <p class="margins-needed" id="sessionname" data-value="{$sessionname}">Welcome {$sessionname}</p>
             {if $sessionrole=="admin"}
-                <a href="newUser.php">
-                    <button class="basic-button">Enter new user</button>
-                </a>
+                <button class="basic-button" onclick='redirect("newUser.php")'>Enter new user</button>
             {/if}
             {if $sessionrole=="admin"}
-                <a href="newCompany.php">
-                    <button class="basic-button">Enter new company</button>
-                </a>
+                <button class="basic-button" onclick='redirect("newCompany.php")'>Enter new company</button>
             {/if}
-            <a href="userList.php">
-                <button class="basic-button">User list</button>
-            </a>
+            <button class="basic-button" onclick='redirect("userList.php")'>User list</button>
             <form id="logout" method="post" action="userList.php"></form>
             <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>
         
@@ -68,14 +64,13 @@
                     {/if}
                 {/foreach}
 
-                    <div class="listing-container">
+                    <div class="listing-container" onclick='redirect("listing.php?id={$listing.id}")' 
+                    data-company-name="{$companyname}">
 
-                        <h2>
-                            <a href="listing.php?id={$listing.id}">{$listing.name}</a>
-                        </h2>
+                        <h2>{$listing.name}</h2>
                         <p>Company: {$companyname}</p>
                         <p>
-                            Employer: <a href="user.php?id={$employerid}">{$employername} {$employersurname}</a>
+                            Employer:{$employername} {$employersurname}</a>
                         </p>
                         <p>Payment in euros: {$listing.payment}</p>
                         <p>{$listing.smalldesc}</p>

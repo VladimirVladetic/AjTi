@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-23 12:09:49
+/* Smarty version 4.3.4, created on 2024-05-03 18:10:56
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\userList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_662788ed49d133_20305043',
+  'unifunc' => 'content_66350c90a20db6_49376298',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '310e78e52520a32623aaa03e947b506f8172c5bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\userList.tpl',
-      1 => 1713516401,
+      1 => 1714752587,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_662788ed49d133_20305043 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66350c90a20db6_49376298 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,6 +41,9 @@ function content_662788ed49d133_20305043 (Smarty_Internal_Template $_smarty_tpl)
     <?php echo '<script'; ?>
  src="./js/userSearch.js" defer><?php echo '</script'; ?>
 >
+    <?php echo '<script'; ?>
+ src="./js/essentials.js" defer><?php echo '</script'; ?>
+>
     <title>User list</title>
 </head>
 <body onload="enterLog(<?php echo $_smarty_tpl->tpl_vars['logsent']->value;?>
@@ -56,21 +59,15 @@ function content_662788ed49d133_20305043 (Smarty_Internal_Template $_smarty_tpl)
 ">Welcome <?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
 </p>
     <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
-        <a href="newUser.php">
-            <button class="basic-button">Enter new user</button>
-        </a>
+        <button class="basic-button" onclick='redirect("newUser.php")'>Enter new user</button>
     <?php }?>
     <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
-        <a href="newCompany.php">
-            <button class="basic-button">Enter new company</button>
-        </a>
+        <button class="basic-button" onclick='redirect("newCompany.php")'>Enter new company</button>
     <?php }?>
     <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?> <form id="delete-selected-users" method="post" action="userList.php"></form>
         <input class="basic-button" form="delete-selected-users" type="submit" name='deleteusersbtn' value="Delete selected users"/>
     <?php }?>
-    <a href="listings.php" class="button-link">
-        <button class="basic-button">Job listings</button>
-    </a>
+    <button class="basic-button" onclick='redirect("listings.php")'>Job listings</button>
     <form id="logout" method="post" action="userList.php"></form>
         <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>
     </div>

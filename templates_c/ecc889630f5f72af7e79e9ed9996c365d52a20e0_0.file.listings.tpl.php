@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-23 12:10:11
+/* Smarty version 4.3.4, created on 2024-05-03 18:24:47
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\listings.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6627890380ce34_35458712',
+  'unifunc' => 'content_66350fcfb7a349_19947591',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ecc889630f5f72af7e79e9ed9996c365d52a20e0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\listings.tpl',
-      1 => 1713516284,
+      1 => 1714753486,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6627890380ce34_35458712 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66350fcfb7a349_19947591 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,10 +30,16 @@ function content_6627890380ce34_35458712 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="./styles/essentials.css">
     <link rel="stylesheet" href="./styles/grid1-2.css">
     <?php echo '<script'; ?>
- src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"><?php echo '</script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
  src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="./js/essentials.js" defer><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="./js/listings.js" defer><?php echo '</script'; ?>
 >
     <title>Job listings</title>
 </head>
@@ -49,18 +55,12 @@ function content_6627890380ce34_35458712 (Smarty_Internal_Template $_smarty_tpl)
 ">Welcome <?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
 </p>
             <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
-                <a href="newUser.php">
-                    <button class="basic-button">Enter new user</button>
-                </a>
+                <button class="basic-button" onclick='redirect("newUser.php")'>Enter new user</button>
             <?php }?>
             <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
-                <a href="newCompany.php">
-                    <button class="basic-button">Enter new company</button>
-                </a>
+                <button class="basic-button" onclick='redirect("newCompany.php")'>Enter new company</button>
             <?php }?>
-            <a href="userList.php">
-                <button class="basic-button">User list</button>
-            </a>
+            <button class="basic-button" onclick='redirect("userList.php")'>User list</button>
             <form id="logout" method="post" action="userList.php"></form>
             <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>
         
@@ -125,18 +125,17 @@ $_smarty_tpl->tpl_vars['user']->do_else = false;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
-                    <div class="listing-container">
+                    <div class="listing-container" onclick='redirect("listing.php?id=<?php echo $_smarty_tpl->tpl_vars['listing']->value['id'];?>
+")' 
+                    data-company-name="<?php echo $_smarty_tpl->tpl_vars['companyname']->value;?>
+">
 
-                        <h2>
-                            <a href="listing.php?id=<?php echo $_smarty_tpl->tpl_vars['listing']->value['id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['listing']->value['name'];?>
-</a>
-                        </h2>
+                        <h2><?php echo $_smarty_tpl->tpl_vars['listing']->value['name'];?>
+</h2>
                         <p>Company: <?php echo $_smarty_tpl->tpl_vars['companyname']->value;?>
 </p>
                         <p>
-                            Employer: <a href="user.php?id=<?php echo $_smarty_tpl->tpl_vars['employerid']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['employername']->value;?>
+                            Employer:<?php echo $_smarty_tpl->tpl_vars['employername']->value;?>
  <?php echo $_smarty_tpl->tpl_vars['employersurname']->value;?>
 </a>
                         </p>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-16 12:29:58
+/* Smarty version 4.3.4, created on 2024-05-03 18:11:04
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\newUser.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_661e5326735e16_06238276',
+  'unifunc' => 'content_66350c98d23294_66445815',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8e1a79b3be6d3c902a827145b9fba0943074cbcb' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\newUser.tpl',
-      1 => 1713263392,
+      1 => 1714752635,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_661e5326735e16_06238276 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66350c98d23294_66445815 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,6 +30,9 @@ function content_661e5326735e16_06238276 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="./styles/essentials.css">
     <link rel="stylesheet" href="./styles/grid1-2.css">
     <link rel="stylesheet" href="./styles/newUser.css">
+    <?php echo '<script'; ?>
+ src="./js/essentials.js" defer><?php echo '</script'; ?>
+>
     <title>New user creation</title>
 </head>
 <body>
@@ -70,9 +73,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </form>
                 </table>
             <button class="basic-button" form="insert-user" id="enter-info-button">Enter Information</button>
-            <a href="userList.php" class="button-link">
-                <button class="basic-button">Go to user list</button>
-            </a>
+            <button class="basic-button" onclick='redirect("userList.php")'>User list</button>
+            <button class="basic-button" onclick='redirect("listings.php")'>Job listings</button>
 
         </div>
 

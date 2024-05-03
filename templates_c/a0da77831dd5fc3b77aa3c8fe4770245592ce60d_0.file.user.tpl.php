@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-04-17 19:33:45
+/* Smarty version 4.3.4, created on 2024-05-03 18:07:16
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_662007f9e8caf0_35292605',
+  'unifunc' => 'content_66350bb4ab6700_74733413',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a0da77831dd5fc3b77aa3c8fe4770245592ce60d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\user.tpl',
-      1 => 1713375220,
+      1 => 1714752409,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_662007f9e8caf0_35292605 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66350bb4ab6700_74733413 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,6 +37,9 @@ function content_662007f9e8caf0_35292605 (Smarty_Internal_Template $_smarty_tpl)
 >
     <?php echo '<script'; ?>
  src="./js/changeCompany.js" defer><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="./js/essentials.js" defer><?php echo '</script'; ?>
 >
     <title>User page for <?php echo $_smarty_tpl->tpl_vars['name']->value;?>
 </title>
@@ -99,12 +102,8 @@ function content_662007f9e8caf0_35292605 (Smarty_Internal_Template $_smarty_tpl)
             <input class="basic-button" type='submit' name='deleteuserbtn' value="Delete user"/>
         </form>
         <?php }?>
-        <a href="userList.php" class="button-link">
-            <button class="basic-button">Go to user list</button>
-        </a>
-        <a href="listings.php" class="button-link">
-                <button class="basic-button">Job listings</button>
-        </a>
+        <button class="basic-button" onclick='redirect("userList.php")'>Go to user list</button>
+        <button class="basic-button" onclick='redirect("listings.php")'>Job listings</button>
 
     </div>
 

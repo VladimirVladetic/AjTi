@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./styles/essentials.css">
     <link rel="stylesheet" href="./styles/grid1-2.css">
     <link rel="stylesheet" href="./styles/newUser.css">
+    <script src="./js/essentials.js" defer></script>
     <title>New user creation</title>
 </head>
 <body>
@@ -33,9 +34,8 @@
                 </form>
                 </table>
             <button class="basic-button" form="insert-user" id="enter-info-button">Enter Information</button>
-            <a href="userList.php" class="button-link">
-                <button class="basic-button">Go to user list</button>
-            </a>
+            <button class="basic-button" onclick='redirect("userList.php")'>User list</button>
+            <button class="basic-button" onclick='redirect("listings.php")'>Job listings</button>
 
         </div>
 

@@ -10,6 +10,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
     <script src="./js/changeCompany.js" defer></script>
+    <script src="./js/essentials.js" defer></script>
     <title>User page for {$name}</title>
 </head>
 <body>
@@ -55,12 +56,8 @@
             <input class="basic-button" type='submit' name='deleteuserbtn' value="Delete user"/>
         </form>
         {/if}
-        <a href="userList.php" class="button-link">
-            <button class="basic-button">Go to user list</button>
-        </a>
-        <a href="listings.php" class="button-link">
-                <button class="basic-button">Job listings</button>
-        </a>
+        <button class="basic-button" onclick='redirect("userList.php")'>Go to user list</button>
+        <button class="basic-button" onclick='redirect("listings.php")'>Job listings</button>
 
     </div>
 

@@ -10,6 +10,7 @@
     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
     <script src="./js/enterLog.js" defer></script>
     <script src="./js/userSearch.js" defer></script>
+    <script src="./js/essentials.js" defer></script>
     <title>User list</title>
 </head>
 <body onload="enterLog({$logsent},{$attempts})">
@@ -21,21 +22,15 @@
     <img class="logo" src="./images/AT4.png" alt="logo"  width="150" height="auto"> 
     <p class="margins-needed" id="sessionname" data-value="{$sessionname}">Welcome {$sessionname}</p>
     {if $sessionrole=="admin"}
-        <a href="newUser.php">
-            <button class="basic-button">Enter new user</button>
-        </a>
+        <button class="basic-button" onclick='redirect("newUser.php")'>Enter new user</button>
     {/if}
     {if $sessionrole=="admin"}
-        <a href="newCompany.php">
-            <button class="basic-button">Enter new company</button>
-        </a>
+        <button class="basic-button" onclick='redirect("newCompany.php")'>Enter new company</button>
     {/if}
     {if $sessionrole=="admin"} <form id="delete-selected-users" method="post" action="userList.php"></form>
         <input class="basic-button" form="delete-selected-users" type="submit" name='deleteusersbtn' value="Delete selected users"/>
     {/if}
-    <a href="listings.php" class="button-link">
-        <button class="basic-button">Job listings</button>
-    </a>
+    <button class="basic-button" onclick='redirect("listings.php")'>Job listings</button>
     <form id="logout" method="post" action="userList.php"></form>
         <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>
     </div>
