@@ -47,7 +47,7 @@ if((isset($_POST['name']) && $_POST['name'] != "")
 
     $hiddenPassword = "";
 
-    $error = $parameterChecker->checkParameters($name,$surname,$yearofbirth,$password);
+    $error = $parameterChecker->checkParameters($name,$surname,$yearofbirth,$password,'',false);
 
     $sql = "select * from company where name='$companyname'";
     $result = mysqli_query($con,$sql);

@@ -35,6 +35,11 @@ h1 {
     flex-direction: column;
 }
 
+#registration-form{
+    display: flex;
+    flex-direction: column;
+}
+
 .rightColumn {
     grid-column: 2;
     display: flex;

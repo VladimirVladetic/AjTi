@@ -2,7 +2,7 @@
 include 'database.php';
 
 class ParameterChecker{
-    public function checkParameters($name,$surname,$yearofbirth,$password){
+    public function checkParameters($name,$surname,$yearofbirth,$password,$password2,$registration){
         $error = false;
         $alerttext = "Password errors: ";
         if((strlen($password) < 8)){
@@ -24,6 +24,10 @@ class ParameterChecker{
             $error = true;
             $alerttext .= "Password must contain at least one number. ";
             //echo "<script>alert('Password must contain at least one number.')</script>";
+        }
+        else if($password != $password2 && $registration){
+            $error = true;
+            $alerttext .= "Passwords must match. ";
         }
 
         

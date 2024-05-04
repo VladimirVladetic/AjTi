@@ -10,6 +10,8 @@ if(!isset($_SESSION['attempts'])){
     $_SESSION['attempts']=1;
 }
 
+$registrationFail = false;
+
 // if($_SESSION['attempts'] > 1){
 //     echo $_SESSION['attempts'];
 //     echo "<script>document.getElementById('failAlert').style.display = 'block';</script>";
@@ -51,8 +53,52 @@ if(isset($_POST['loginbtn'])){
     }
 }
 
+if(isset($_POST["registerbtn"])){
+    $name = $_POST['register-name'];
+    $surname = $_POST['register-surname'];
+
+    $sql = "select max(id) from user";
+    $result = mysqli_query($con,$sql);
+    $row = mysqli_fetch_array($result);
+
+    $id = ($row[0] + 1) ?? '';
+
+    $username = $name . $surname . $id;
+
+    $sql = "select * from user where username='$username'";
+    $result = mysqli_query($con,$sql);
+    $row = mysqli_fetch_array($result);
+
+    if(!(isset($row) && $row[1] == $username)){
+        $password = $_POST['register-password'];
+        $password2 = $_POST['register-password-confirm'];
+        $email = $_POST['register-email'];
+        $yearofbirth = $_POST['register-year'];
+        $role = "user";
+        $companyid = 8; //unemployed by default
+
+        $error = $parameterChecker->checkParameters($name,$surname,$yearofbirth,$password,$password2,true);
+    
+        if(!$error){
+            $sql = "insert into user(id,username,name,surname,yearofbirth,password,role,email,companyid)values('$id','$username','$name','$surname','$yearofbirth','$password','$role','$email','$companyid')";
+            if(mysqli_query($con,$sql)){
+                echo "<script>alert('Success!')</script>";
+                header("Location: userList.php");
+            }else{
+                echo "<script>alert('Failure!')</script>";
+            }
+        }
+        else{
+            $registrationFail = true;
+        }
+    }
+    else{
+        $registrationFail = true;
+    }
+}
+
 mysqli_close($con);
 
+$smarty->assign('registrationFail', $registrationFail);
 $smarty->assign('attempts', $_SESSION['attempts']);
 $smarty->display('templates/index.tpl');
-?>
