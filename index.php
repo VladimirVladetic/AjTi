@@ -1,8 +1,10 @@
 <?php
 include 'database.php';
 include '../libs/Smarty.class.php';
+include 'parameterChecker.class.php';
 
 $smarty = new Smarty;
+$parameterChecker = new ParameterChecker;
 
 session_start(); 
 
@@ -10,7 +12,12 @@ if(!isset($_SESSION['attempts'])){
     $_SESSION['attempts']=1;
 }
 
-$registrationFail = false;
+if(!isset($_COOKIE['registrationFail'])){
+    $_COOKIE['registrationFail'] = false;
+}
+
+// var_dump("test");
+
 
 // if($_SESSION['attempts'] > 1){
 //     echo $_SESSION['attempts'];
@@ -45,6 +52,7 @@ if(isset($_POST['loginbtn'])){
         $_SESSION['expire'] = $_SESSION['start'] + (300); 
         if($_SESSION['loggedin']){
             header("Location: userList.php");
+            exit;
         }
     }
     else{
@@ -52,8 +60,7 @@ if(isset($_POST['loginbtn'])){
         // echo "<script>alert('Incorrect user information.')</script>";
     }
 }
-
-if(isset($_POST["registerbtn"])){
+else if(isset($_POST['registerbtn'])){
     $name = $_POST['register-name'];
     $surname = $_POST['register-surname'];
 
@@ -82,23 +89,22 @@ if(isset($_POST["registerbtn"])){
         if(!$error){
             $sql = "insert into user(id,username,name,surname,yearofbirth,password,role,email,companyid)values('$id','$username','$name','$surname','$yearofbirth','$password','$role','$email','$companyid')";
             if(mysqli_query($con,$sql)){
-                echo "<script>alert('Success!')</script>";
-                header("Location: userList.php");
+                header("Location: index.php");
             }else{
                 echo "<script>alert('Failure!')</script>";
             }
         }
         else{
-            $registrationFail = true;
+            $_COOKIE['registrationFail'] = true;
         }
     }
     else{
-        $registrationFail = true;
+        $_COOKIE['registrationFail'] = true;
     }
 }
 
 mysqli_close($con);
 
-$smarty->assign('registrationFail', $registrationFail);
+$smarty->assign('registrationFail', $_COOKIE['registrationFail']);
 $smarty->assign('attempts', $_SESSION['attempts']);
 $smarty->display('templates/index.tpl');

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-05-04 15:08:54
+/* Smarty version 4.3.4, created on 2024-05-04 16:49:25
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6636336610efa1_60509816',
+  'unifunc' => 'content_66364af58969d2_61213969',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e6140f53ed83fddb711dbb2fe19933ea6eaea4c5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\index.tpl',
-      1 => 1714828075,
+      1 => 1714834136,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6636336610efa1_60509816 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66364af58969d2_61213969 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,7 +60,7 @@ function content_6636336610efa1_60509816 (Smarty_Internal_Template $_smarty_tpl)
             
             <button class="basic-button" onclick="registrationDiv()" id="registration-button">Register</button>
 
-            <form id="registration-form" style="display: none;">
+            <form id="registration-form" style="display: none;" method="post">
                 <input type="text" name="register-name" placeholder="Enter your name.">
                 <input type="text" name="register-surname" placeholder="Enter your surname.">
                 <input type="password" name="register-password" placeholder="Enter your password.">
@@ -75,13 +75,13 @@ function content_6636336610efa1_60509816 (Smarty_Internal_Template $_smarty_tpl)
     </div>
 
     <?php if ($_smarty_tpl->tpl_vars['attempts']->value > 1) {?>
-        <div class="alert" id="failAlert" style="display: block;">
+        <div class="alert" id="failAlert" style="display: block; margin-top: 5%;">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
             <p class="alertText">Incorrect user information.</p>
         </div> 
     <?php }?>
     <?php if ($_smarty_tpl->tpl_vars['registrationFail']->value == true) {?>
-        <div class="alert" id="failAlert" style="display: block;">
+        <div class="alert" id="registrationFailAlert" style="display: block; margin-top: 5%;">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
             <p class="alertText">Registration Fail</p>
         </div> 

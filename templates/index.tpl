@@ -31,7 +31,7 @@
             
             <button class="basic-button" onclick="registrationDiv()" id="registration-button">Register</button>
 
-            <form id="registration-form" style="display: none;">
+            <form id="registration-form" style="display: none;" method="post">
                 <input type="text" name="register-name" placeholder="Enter your name.">
                 <input type="text" name="register-surname" placeholder="Enter your surname.">
                 <input type="password" name="register-password" placeholder="Enter your password.">
@@ -46,13 +46,13 @@
     </div>
 
     {if $attempts > 1}
-        <div class="alert" id="failAlert" style="display: block;">
+        <div class="alert" id="failAlert" style="display: block; margin-top: 5%;">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
             <p class="alertText">Incorrect user information.</p>
         </div> 
     {/if}
     {if $registrationFail == true}
-        <div class="alert" id="failAlert" style="display: block;">
+        <div class="alert" id="registrationFailAlert" style="display: block; margin-top: 5%;">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
             <p class="alertText">Registration Fail</p>
         </div> 
