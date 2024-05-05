@@ -5,12 +5,25 @@ function registrationDiv(){
     var registrationButton = document.getElementById("registration-button");
     var registerButton = document.getElementById("register-button");
     var registrationInstruction = document.getElementById("registration-instruction");
+    document.getElementById("back-button").style.display = "flex";
     loginFrom.style.display = "none";
     loginButton.style.display = "none";
     registrationForm.style.display = "flex";
     registrationButton.style.display = "none";
     registerButton.style.display = "flex";
     registrationInstruction.style.display = "flex";
+    document.getElementById("flexible-padding").style.paddingTop = "5%";
+}
+
+function backToLogin(){
+    document.getElementById("login-form").style.display = "flex";
+    document.getElementById("login-button").style.display = "flex"
+    document.getElementById("registration-form").style.display = "none";
+    document.getElementById("registration-button").style.display = "flex";
+    document.getElementById("register-button").style.display = "none";
+    document.getElementById("registration-instruction").style.display = "none";
+    document.getElementById("back-button").style.display = "none";
+    document.getElementById("flexible-padding").style.paddingTop = "20%";
 }
 
 

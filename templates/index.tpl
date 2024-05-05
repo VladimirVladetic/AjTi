@@ -21,7 +21,7 @@
 
         </div>
 
-        <div class="rightColumn">
+        <div class="rightColumn" id="flexible-padding">
 
             <form id="login-form" method="post" action="index.php">
                 <input id="login-username" type="text" name="username" placeholder="Enter your username."/>
@@ -44,6 +44,7 @@
                 <input type="text" name="register-year" placeholder="Enter your year of birth.">
             </form>
             <button class="basic-button" name="registerbtn" id="register-button" form="registration-form" style="display: none;">Register</button>
+            <button class="basic-button" onclick="backToLogin()" name="backbtn" id="back-button" style="display: none;">Back</button>
 
         </div>
         

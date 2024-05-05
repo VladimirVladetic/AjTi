@@ -30,14 +30,10 @@ h1 {
     text-align: center;
 }
 
-#login-form{
+#login-form, #registration-form{
     display: flex;
     flex-direction: column;
-}
-
-#registration-form{
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 1%;
 }
 
 .rightColumn {
@@ -45,7 +41,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 10%;
+    padding-top: 20%;
     padding-right: 25%;
 }
 

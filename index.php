@@ -55,7 +55,7 @@ if(isset($_POST['loginbtn'])){
         $_SESSION['start'] = time(); 
         $_SESSION['expire'] = $_SESSION['start'] + (300); 
         if($_SESSION['loggedin']){
-            header("Location: userList.php");
+            header("Location: listings.php");
             exit;
         }
     }

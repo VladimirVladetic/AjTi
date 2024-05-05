@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-05-05 19:12:56
+/* Smarty version 4.3.4, created on 2024-05-05 19:33:11
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6637be1827ab95_42195294',
+  'unifunc' => 'content_6637c2d7b4ed49_29337118',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e6140f53ed83fddb711dbb2fe19933ea6eaea4c5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\index.tpl',
-      1 => 1714929175,
+      1 => 1714930363,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6637be1827ab95_42195294 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6637c2d7b4ed49_29337118 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +50,7 @@ function content_6637be1827ab95_42195294 (Smarty_Internal_Template $_smarty_tpl)
 
         </div>
 
-        <div class="rightColumn">
+        <div class="rightColumn" id="flexible-padding">
 
             <form id="login-form" method="post" action="index.php">
                 <input id="login-username" type="text" name="username" placeholder="Enter your username."/>
@@ -73,6 +73,7 @@ function content_6637be1827ab95_42195294 (Smarty_Internal_Template $_smarty_tpl)
                 <input type="text" name="register-year" placeholder="Enter your year of birth.">
             </form>
             <button class="basic-button" name="registerbtn" id="register-button" form="registration-form" style="display: none;">Register</button>
+            <button class="basic-button" onclick="backToLogin()" name="backbtn" id="back-button" style="display: none;">Back</button>
 
         </div>
         
