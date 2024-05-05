@@ -19,11 +19,11 @@
             <img class="margins-needed" src="./images/AT4.png" alt="logo"  width="250" height="auto"> 
             <table>
                 <form class="margins-needed" id="insert-user" method="post" action="newUser.php">
-                    <tr><td><input id="info-name" type="text" name="name" placeholder="Enter your name." {if isset($name)} value="{$name}" {/if}></td></tr>
-                    <tr><td><input id="info-surname" type="text" name="surname" placeholder="Enter your surname."{if isset($surname)} value="{$surname}" {/if}></td></tr>
-                    <tr><td><input id="info-email" type="text" name="email" placeholder="Enter your e-mail."{if isset($surname)} value="{$surname}" {/if}></td></tr>
-                    <tr><td><input id="info-yearofbirth" type="number" name="yearofbirth" placeholder="Enter your year of birth."{if isset($yearofbirth)} value="{$yearofbirth}" {/if}></td></tr>
-                    <tr><td><input id="info-password" type="text" name="password" placeholder="Enter your password."{if isset($password)} value="{$password}" {/if}></td></tr>
+                    <tr><td><input id="info-name" type="text" name="name" placeholder="Enter name." {if isset($name)} value="{$name}" {/if}></td></tr>
+                    <tr><td><input id="info-surname" type="text" name="surname" placeholder="Enter surname."{if isset($surname)} value="{$surname}" {/if}></td></tr>
+                    <tr><td><input id="info-email" type="text" name="email" placeholder="Enter e-mail."{if isset($surname)} value="{$surname}" {/if}></td></tr>
+                    <tr><td><input id="info-yearofbirth" type="number" name="yearofbirth" placeholder="Enter year of birth."{if isset($yearofbirth)} value="{$yearofbirth}" {/if}></td></tr>
+                    <tr><td><input id="info-password" type="text" name="password" placeholder="Enter password."{if isset($password)} value="{$password}" {/if}></td></tr>
                     <tr><td>
                     <select name="company" id="info-company">
                         {foreach from=$companies item=company} 
@@ -31,6 +31,14 @@
                         {/foreach}
                     </select>
                     </td></tr>
+                    <tr><td>
+                        <select name="role" id="info-role">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                        <option value="employer">Employer</option>
+                    </select>
+                    </td></tr>
+
                 </form>
                 </table>
             <button class="basic-button" form="insert-user" id="enter-info-button">Enter Information</button>

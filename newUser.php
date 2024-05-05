@@ -36,14 +36,13 @@ if((isset($_POST['name']) && $_POST['name'] != "")
     $email = $_POST['email'] ?? '';
 
     $companyname = $_POST['company'];
+    $role = $_POST['role'];
 
     $sql = "select max(id) from user";
     $result = mysqli_query($con,$sql);
     $row = mysqli_fetch_array($result);
 
     $id = ($row[0] + 1) ?? '';
-
-    $role = "user";
 
     $hiddenPassword = "";
 

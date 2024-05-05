@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-05-03 18:11:04
+/* Smarty version 4.3.4, created on 2024-05-05 19:54:43
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\newUser.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_66350c98d23294_66445815',
+  'unifunc' => 'content_6637c7e3ebac05_48532955',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8e1a79b3be6d3c902a827145b9fba0943074cbcb' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\newUser.tpl',
-      1 => 1714752635,
+      1 => 1714931682,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66350c98d23294_66445815 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6637c7e3ebac05_48532955 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,15 +44,15 @@ function content_66350c98d23294_66445815 (Smarty_Internal_Template $_smarty_tpl)
             <img class="margins-needed" src="./images/AT4.png" alt="logo"  width="250" height="auto"> 
             <table>
                 <form class="margins-needed" id="insert-user" method="post" action="newUser.php">
-                    <tr><td><input id="info-name" type="text" name="name" placeholder="Enter your name." <?php if ((isset($_smarty_tpl->tpl_vars['name']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+                    <tr><td><input id="info-name" type="text" name="name" placeholder="Enter name." <?php if ((isset($_smarty_tpl->tpl_vars['name']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
 " <?php }?>></td></tr>
-                    <tr><td><input id="info-surname" type="text" name="surname" placeholder="Enter your surname."<?php if ((isset($_smarty_tpl->tpl_vars['surname']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['surname']->value;?>
+                    <tr><td><input id="info-surname" type="text" name="surname" placeholder="Enter surname."<?php if ((isset($_smarty_tpl->tpl_vars['surname']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['surname']->value;?>
 " <?php }?>></td></tr>
-                    <tr><td><input id="info-email" type="text" name="email" placeholder="Enter your e-mail."<?php if ((isset($_smarty_tpl->tpl_vars['surname']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['surname']->value;?>
+                    <tr><td><input id="info-email" type="text" name="email" placeholder="Enter e-mail."<?php if ((isset($_smarty_tpl->tpl_vars['surname']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['surname']->value;?>
 " <?php }?>></td></tr>
-                    <tr><td><input id="info-yearofbirth" type="number" name="yearofbirth" placeholder="Enter your year of birth."<?php if ((isset($_smarty_tpl->tpl_vars['yearofbirth']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['yearofbirth']->value;?>
+                    <tr><td><input id="info-yearofbirth" type="number" name="yearofbirth" placeholder="Enter year of birth."<?php if ((isset($_smarty_tpl->tpl_vars['yearofbirth']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['yearofbirth']->value;?>
 " <?php }?>></td></tr>
-                    <tr><td><input id="info-password" type="text" name="password" placeholder="Enter your password."<?php if ((isset($_smarty_tpl->tpl_vars['password']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['password']->value;?>
+                    <tr><td><input id="info-password" type="text" name="password" placeholder="Enter password."<?php if ((isset($_smarty_tpl->tpl_vars['password']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['password']->value;?>
 " <?php }?>></td></tr>
                     <tr><td>
                     <select name="company" id="info-company">
@@ -70,6 +70,14 @@ $_smarty_tpl->tpl_vars['company']->do_else = false;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     </select>
                     </td></tr>
+                    <tr><td>
+                        <select name="role" id="info-role">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                        <option value="employer">Employer</option>
+                    </select>
+                    </td></tr>
+
                 </form>
                 </table>
             <button class="basic-button" form="insert-user" id="enter-info-button">Enter Information</button>
