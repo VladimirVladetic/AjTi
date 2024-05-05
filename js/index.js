@@ -4,11 +4,13 @@ function registrationDiv(){
     var registrationForm = document.getElementById("registration-form");
     var registrationButton = document.getElementById("registration-button");
     var registerButton = document.getElementById("register-button");
+    var registrationInstruction = document.getElementById("registration-instruction");
     loginFrom.style.display = "none";
     loginButton.style.display = "none";
     registrationForm.style.display = "flex";
     registrationButton.style.display = "none";
     registerButton.style.display = "flex";
+    registrationInstruction.style.display = "flex";
 }
 
 

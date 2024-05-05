@@ -12,8 +12,12 @@ if(!isset($_SESSION['attempts'])){
     $_SESSION['attempts']=1;
 }
 
-if(!isset($_COOKIE['registrationFail'])){
-    $_COOKIE['registrationFail'] = false;
+if(!isset($_SESSION['registrationFail'])){
+    $_SESSION['registrationFail'] = false;
+}
+
+if(!isset($_SESSION['alertText'])){
+    $_SESSION['alertText'] = '';
 }
 
 // var_dump("test");
@@ -85,8 +89,11 @@ else if(isset($_POST['registerbtn'])){
         $companyid = 8; //unemployed by default
 
         $error = $parameterChecker->checkParameters($name,$surname,$yearofbirth,$password,$password2,true);
+
+        $_SESSION['alertText'] = $parameterChecker->getAlertText();
     
         if(!$error){
+            $_SESSION['registrationFail'] = false;
             $sql = "insert into user(id,username,name,surname,yearofbirth,password,role,email,companyid)values('$id','$username','$name','$surname','$yearofbirth','$password','$role','$email','$companyid')";
             if(mysqli_query($con,$sql)){
                 header("Location: index.php");
@@ -95,16 +102,18 @@ else if(isset($_POST['registerbtn'])){
             }
         }
         else{
-            $_COOKIE['registrationFail'] = true;
+            $_SESSION['registrationFail'] = true;
         }
     }
     else{
-        $_COOKIE['registrationFail'] = true;
+        $_SESSION['registrationFail'] = true;
+        $_SESSION['alertText'] = "User already exists.";
     }
 }
 
 mysqli_close($con);
 
-$smarty->assign('registrationFail', $_COOKIE['registrationFail']);
+ $smarty->assign('alertText', $_SESSION['alertText']);
+$smarty->assign('registrationFail', $_SESSION['registrationFail']);
 $smarty->assign('attempts', $_SESSION['attempts']);
 $smarty->display('templates/index.tpl');

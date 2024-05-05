@@ -2,60 +2,62 @@
 include 'database.php';
 
 class ParameterChecker{
+    private $alerttext = "Password errors: ";
     public function checkParameters($name,$surname,$yearofbirth,$password,$password2,$registration){
         $error = false;
-        $alerttext = "Password errors: ";
         if((strlen($password) < 8)){
             $error = true;
-            $alerttext .= "Password must be longer than 8 characters. ";
+            $this->alerttext .= "Password must be longer than 8 characters. ";
             //echo "<script>alert('Password must be longer than 8 characters.')</script>"; 
         }
         if(preg_match('/[A-Z]/', $password)===0){
             $error = true;
-            $alerttext .= "Password must contain at least one uppercase letter. ";
+            $this->alerttext .= "Password must contain at least one uppercase letter. ";
             //echo "<script>alert('Password must contain at least one uppercase letter.')</script>";
         } 
-        else if(preg_match('/[a-z]/', $password)===0){
+        if(preg_match('/[a-z]/', $password)===0){
             $error = true;
-            $alerttext .= "Password must contain at least one lowercase letter. ";
+            $this->alerttext .= "Password must contain at least one lowercase letter. ";
             //echo "<script>alert('Password must contain at least one lowercase letter.')</script>";
         }
-        else if(preg_match('/[0-9]/', $password)===0){
+        if(preg_match('/[0-9]/', $password)===0){
             $error = true;
-            $alerttext .= "Password must contain at least one number. ";
+            $this->alerttext .= "Password must contain at least one number. ";
             //echo "<script>alert('Password must contain at least one number.')</script>";
         }
-        else if($password != $password2 && $registration){
+        if($password != $password2 && $registration){
             $error = true;
-            $alerttext .= "Passwords must match. ";
+            $this->alerttext .= "Passwords must match. ";
         }
 
         
         if($name == ""){
             $error = true;
-            $alerttext .= " Name errors: ";
-            $alerttext .= "Name required. ";
+            $this->alerttext .= " Name errors: ";
+            $this->alerttext .= "Name required. ";
         }
         if($surname == ""){
             $error = true;
-            $alerttext .= " Surnameame errors: ";
-            $alerttext .= "Surname required. ";
+            $this->alerttext .= " Surname errors: ";
+            $this->alerttext .= "Surname required. ";
         }
 
         $currentDate = new DateTime();
         $currentyear = $currentDate->format("Y");
-        if($yearofbirth > $currentyear || $yearofbirth < 1800){
+        if($yearofbirth > $currentyear || $yearofbirth < 1800 || ($currentyear - $yearofbirth) < 18){
             $error = true;
-            $alerttext .= " Year of birth errors: ";
-            $alerttext .= "Input valid year of birth. ";
+            $this->alerttext .= " Year of birth errors: ";
+            $this->alerttext .= "Input valid year of birth. ";
             //echo "<script>alert('Input valid year of birth.')</script>";
         }
         if($error)
-        echo "<script>alert('$alerttext')</script>";
+        // echo "<script>showPopup('$alerttext')</script>";
 
         return $error;
     }
 
-}
+    public function getAlertText(){
+        return $this->alerttext;
+    }
 
-?>
+}
