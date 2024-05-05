@@ -42,6 +42,7 @@ mysqli_close($con);
 
 $smarty->assign('sessionrole', $_SESSION['role']);
 $smarty->assign('sessionname', $_SESSION['name']);
+$smarty->assign('sessionid', $_SESSION['id']);
 
 $smarty->assign('companydata', $companydata); 
 $smarty->assign('userdata', $userdata);

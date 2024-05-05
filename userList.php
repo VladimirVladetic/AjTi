@@ -65,6 +65,7 @@ $smarty->assign('sessionrole', $_SESSION['role']);
 $smarty->assign('logsent', $_SESSION['logsent']);
 $smarty->assign('sessionname', $_SESSION['name']);
 $smarty->assign('attempts', $_SESSION['attempts']);
+$smarty->assign('sessionid', $_SESSION['id']);
 
 $smarty->assign('companydata', $companydata); 
 $smarty->assign('data', $data); 

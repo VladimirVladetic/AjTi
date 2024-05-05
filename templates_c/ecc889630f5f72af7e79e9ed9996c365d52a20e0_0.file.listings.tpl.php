@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-05-03 18:24:47
+/* Smarty version 4.3.4, created on 2024-05-05 19:48:20
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\listings.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_66350fcfb7a349_19947591',
+  'unifunc' => 'content_6637c664596633_05281706',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ecc889630f5f72af7e79e9ed9996c365d52a20e0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\listings.tpl',
-      1 => 1714753486,
+      1 => 1714931299,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66350fcfb7a349_19947591 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6637c664596633_05281706 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,6 +61,8 @@ function content_66350fcfb7a349_19947591 (Smarty_Internal_Template $_smarty_tpl)
                 <button class="basic-button" onclick='redirect("newCompany.php")'>Enter new company</button>
             <?php }?>
             <button class="basic-button" onclick='redirect("userList.php")'>User list</button>
+            <button class="basic-button" onclick='redirect("user.php?id=<?php echo $_smarty_tpl->tpl_vars['sessionid']->value;?>
+")'>My profile</button>
             <form id="logout" method="post" action="userList.php"></form>
             <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>
         

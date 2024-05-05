@@ -31,6 +31,7 @@
         <input class="basic-button" form="delete-selected-users" type="submit" name='deleteusersbtn' value="Delete selected users"/>
     {/if}
     <button class="basic-button" onclick='redirect("listings.php")'>Job listings</button>
+    <button class="basic-button" onclick='redirect("user.php?id={$sessionid}")'>My profile</button>
     <form id="logout" method="post" action="userList.php"></form>
         <input class="basic-button" form="logout" type="submit" name='logoutbtn' value="Log out"/>
     </div>
