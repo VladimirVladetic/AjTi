@@ -62,6 +62,7 @@ $smarty->assign('employerusername',$employerusername);
 $smarty->assign('employeremail',$employeremail);
 
 $smarty->assign('sessionrole',$_SESSION['role']);
+$smarty->assign('sessionid', $_SESSION['id']);
 
 $smarty->display('listing.tpl'); 
 }
