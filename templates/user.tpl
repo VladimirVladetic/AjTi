@@ -9,7 +9,7 @@
     {* <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> *}
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
-    <script src="./js/changeCompany.js" defer></script>
+    <script src="./js/changeUser.js" defer></script>
     <script src="./js/essentials.js" defer></script>
     <title>User page for {$name}</title>
 </head>
@@ -43,7 +43,7 @@
             <button class="basic-button" form="update-user-form" id="update-info-button">Update user information</button>
             <button class="basic-button" onclick="openChangeCompanyPopup()">Change company</button>
         {/if}
-        {if $sessionrole=="user"}
+        {if $sessionrole=="user" || $sessionrole=="employer"}
                     <h2 class="margins2-needed">Name: {if isset($name)} {$name} {/if}</h2>
                     <h2 class="margins2-needed">Surname: {if isset($surname)} {$surname} {/if}</h2>
                     <h2 class="margins2-needed">Year of birth: {if isset($yearofbirth)} {$yearofbirth} {/if}</h2>
@@ -56,7 +56,10 @@
             <input class="basic-button" type='submit' name='deleteuserbtn' value="Delete user"/>
         </form>
         {/if}
-        <button class="basic-button" onclick='redirect("userList.php")'>Go to user list</button>
+        {if $sessionrole=="admin" || ($sessionrole=="employer" && $companyid==$sessioncompanyid)}
+            <button class="basic-button" onclick="openChangeRolePopup()">Change role</button>
+        {/if}
+        <button class="basic-button" onclick='redirect("userList.php")'>User list</button>
         <button class="basic-button" onclick='redirect("listings.php")'>Job listings</button>
 
     </div>
@@ -73,7 +76,7 @@
 
     <div class="overlay" id="overlay"></div>
         <div class="popup-container" id="popup">
-            <h2 class="black-text">Change Company</h2>
+            <h2 class="black-text">Change company</h2>
             <label for="dropdown">Select a company:</label>
             <select id="dropdown">
                 {foreach from=$companies item=company} 
@@ -83,6 +86,23 @@
             <button class="basic-button" onclick="submitChange()">Submit</button>
             <button class="basic-button" onclick="closePopup()">Close</button>
         </div>
+    </div>
+
+    <div class="overlay" id="overlay-role"></div>
+        <div class="popup-container" id="popup-role">
+            <h2 class="black-text">Change role</h2>
+            <label for="dropdown-role">Select a role:</label>
+            <select id="dropdown-role">
+                <option value="user">User</option>
+                <option value="employer">Employer</option>
+                {if $sessionrole=="admin"}
+                    <option value="admin">Admin</option>
+                {/if}
+            </select>
+            <button class="basic-button" onclick="submitChangeRole()">Submit</button>
+            <button class="basic-button" onclick="closePopup()">Close</button>
+        </div>
+    </div>
 
 </body>
 </html>

@@ -51,6 +51,7 @@ if(isset($_POST['loginbtn'])){
 		$_SESSION['id'] = $row[0];
         $_SESSION['role'] = $row[6];
         $_SESSION['email'] = $row[7];
+        $_SESSION['companyid'] = $row[8];
         $_SESSION['logsent'] = 0;
         $_SESSION['start'] = time(); 
         $_SESSION['expire'] = $_SESSION['start'] + (300); 

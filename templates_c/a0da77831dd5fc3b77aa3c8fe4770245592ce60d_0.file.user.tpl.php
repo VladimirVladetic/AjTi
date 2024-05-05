@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-05-03 18:07:16
+/* Smarty version 4.3.4, created on 2024-05-05 20:16:52
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_66350bb4ab6700_74733413',
+  'unifunc' => 'content_6637cd14e122b1_70884631',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a0da77831dd5fc3b77aa3c8fe4770245592ce60d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\user.tpl',
-      1 => 1714752409,
+      1 => 1714932999,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66350bb4ab6700_74733413 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6637cd14e122b1_70884631 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +36,7 @@ function content_66350bb4ab6700_74733413 (Smarty_Internal_Template $_smarty_tpl)
  src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="./js/changeCompany.js" defer><?php echo '</script'; ?>
+ src="./js/changeUser.js" defer><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
  src="./js/essentials.js" defer><?php echo '</script'; ?>
@@ -83,7 +83,7 @@ function content_66350bb4ab6700_74733413 (Smarty_Internal_Template $_smarty_tpl)
             <button class="basic-button" form="update-user-form" id="update-info-button">Update user information</button>
             <button class="basic-button" onclick="openChangeCompanyPopup()">Change company</button>
         <?php }?>
-        <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "user") {?>
+        <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "user" || $_smarty_tpl->tpl_vars['sessionrole']->value == "employer") {?>
                     <h2 class="margins2-needed">Name: <?php if ((isset($_smarty_tpl->tpl_vars['name']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['name']->value;?>
  <?php }?></h2>
                     <h2 class="margins2-needed">Surname: <?php if ((isset($_smarty_tpl->tpl_vars['surname']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['surname']->value;?>
@@ -102,7 +102,10 @@ function content_66350bb4ab6700_74733413 (Smarty_Internal_Template $_smarty_tpl)
             <input class="basic-button" type='submit' name='deleteuserbtn' value="Delete user"/>
         </form>
         <?php }?>
-        <button class="basic-button" onclick='redirect("userList.php")'>Go to user list</button>
+        <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin" || ($_smarty_tpl->tpl_vars['sessionrole']->value == "employer" && $_smarty_tpl->tpl_vars['companyid']->value == $_smarty_tpl->tpl_vars['sessioncompanyid']->value)) {?>
+            <button class="basic-button" onclick="openChangeRolePopup()">Change role</button>
+        <?php }?>
+        <button class="basic-button" onclick='redirect("userList.php")'>User list</button>
         <button class="basic-button" onclick='redirect("listings.php")'>Job listings</button>
 
     </div>
@@ -120,7 +123,7 @@ function content_66350bb4ab6700_74733413 (Smarty_Internal_Template $_smarty_tpl)
 
     <div class="overlay" id="overlay"></div>
         <div class="popup-container" id="popup">
-            <h2 class="black-text">Change Company</h2>
+            <h2 class="black-text">Change company</h2>
             <label for="dropdown">Select a company:</label>
             <select id="dropdown">
                 <?php
@@ -139,6 +142,23 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <button class="basic-button" onclick="submitChange()">Submit</button>
             <button class="basic-button" onclick="closePopup()">Close</button>
         </div>
+    </div>
+
+    <div class="overlay" id="overlay-role"></div>
+        <div class="popup-container" id="popup-role">
+            <h2 class="black-text">Change role</h2>
+            <label for="dropdown-role">Select a role:</label>
+            <select id="dropdown-role">
+                <option value="user">User</option>
+                <option value="employer">Employer</option>
+                <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
+                    <option value="admin">Admin</option>
+                <?php }?>
+            </select>
+            <button class="basic-button" onclick="submitChangeRole()">Submit</button>
+            <button class="basic-button" onclick="closePopup()">Close</button>
+        </div>
+    </div>
 
 </body>
 </html><?php }

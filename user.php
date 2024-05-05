@@ -69,8 +69,10 @@ $smarty->assign('password',$password);
 $smarty->assign('username',$username);
 $smarty->assign('email',$email);
 $smarty->assign('role',$role);
+$smarty->assign('companyid', $companyid);
 $smarty->assign('companyname',$companyname);
 $smarty->assign('sessionrole',$_SESSION['role']);
+$smarty->assign('sessioncompanyid',$_SESSION['companyid']);
 $smarty->assign('companies',$companies);
 
 $smarty->display('user.tpl'); 
