@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-05-05 20:16:52
+/* Smarty version 4.3.4, created on 2024-05-05 20:43:55
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6637cd14e122b1_70884631',
+  'unifunc' => 'content_6637d36b2de0d2_69105302',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a0da77831dd5fc3b77aa3c8fe4770245592ce60d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\user.tpl',
-      1 => 1714932999,
+      1 => 1714934632,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6637cd14e122b1_70884631 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6637d36b2de0d2_69105302 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,7 +81,6 @@ function content_6637cd14e122b1_70884631 (Smarty_Internal_Template $_smarty_tpl)
  <?php }?></p>
             </form>
             <button class="basic-button" form="update-user-form" id="update-info-button">Update user information</button>
-            <button class="basic-button" onclick="openChangeCompanyPopup()">Change company</button>
         <?php }?>
         <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "user" || $_smarty_tpl->tpl_vars['sessionrole']->value == "employer") {?>
                     <h2 class="margins2-needed">Name: <?php if ((isset($_smarty_tpl->tpl_vars['name']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['name']->value;?>
@@ -101,6 +100,9 @@ function content_6637cd14e122b1_70884631 (Smarty_Internal_Template $_smarty_tpl)
 ">
             <input class="basic-button" type='submit' name='deleteuserbtn' value="Delete user"/>
         </form>
+        <?php }?>
+        <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin" || ($_smarty_tpl->tpl_vars['sessionrole']->value == "employer" && ($_smarty_tpl->tpl_vars['companyid']->value == $_smarty_tpl->tpl_vars['sessioncompanyid']->value || $_smarty_tpl->tpl_vars['companyid']->value == 8))) {?>
+            <button class="basic-button" onclick="openChangeCompanyPopup()">Change company</button>
         <?php }?>
         <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin" || ($_smarty_tpl->tpl_vars['sessionrole']->value == "employer" && $_smarty_tpl->tpl_vars['companyid']->value == $_smarty_tpl->tpl_vars['sessioncompanyid']->value)) {?>
             <button class="basic-button" onclick="openChangeRolePopup()">Change role</button>
@@ -126,18 +128,26 @@ function content_6637cd14e122b1_70884631 (Smarty_Internal_Template $_smarty_tpl)
             <h2 class="black-text">Change company</h2>
             <label for="dropdown">Select a company:</label>
             <select id="dropdown">
-                <?php
+                <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
+                    <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['companies']->value, 'company');
 $_smarty_tpl->tpl_vars['company']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['company']->value) {
 $_smarty_tpl->tpl_vars['company']->do_else = false;
 ?> 
-                <option value="<?php echo $_smarty_tpl->tpl_vars['company']->value['name'];?>
+                    <option value="<?php echo $_smarty_tpl->tpl_vars['company']->value['name'];?>
 "><?php echo $_smarty_tpl->tpl_vars['company']->value['name'];?>
 </option>
-                <?php
+                    <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                <?php }?>
+                <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "employer") {?>
+                    <option value="Unemployed">Unemployed</option>
+                    <option value="<?php echo $_smarty_tpl->tpl_vars['sessioncompanyname']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['sessioncompanyname']->value;?>
+</option>
+                <?php }?>
             </select>
             <button class="basic-button" onclick="submitChange()">Submit</button>
             <button class="basic-button" onclick="closePopup()">Close</button>

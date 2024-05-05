@@ -39,6 +39,14 @@ if(isset($_GET['id'])){
         $companies[] = $row;
     }
 
+    $sessioncompanyname = '';
+
+    foreach($companies as $company) {
+        if ($company['id'] == $_SESSION['companyid']) {
+            $sessioncompanyname = $company['name']; 
+        }
+    }
+
 }
 
 if(isset($_POST['deleteuserbtn'])){
@@ -73,6 +81,7 @@ $smarty->assign('companyid', $companyid);
 $smarty->assign('companyname',$companyname);
 $smarty->assign('sessionrole',$_SESSION['role']);
 $smarty->assign('sessioncompanyid',$_SESSION['companyid']);
+$smarty->assign('sessioncompanyname', $sessioncompanyname);
 $smarty->assign('companies',$companies);
 
 $smarty->display('user.tpl'); 

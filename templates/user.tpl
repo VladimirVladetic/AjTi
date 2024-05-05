@@ -41,7 +41,6 @@
                 <p>Role: {if isset($role)} {$role} {/if}</p>
             </form>
             <button class="basic-button" form="update-user-form" id="update-info-button">Update user information</button>
-            <button class="basic-button" onclick="openChangeCompanyPopup()">Change company</button>
         {/if}
         {if $sessionrole=="user" || $sessionrole=="employer"}
                     <h2 class="margins2-needed">Name: {if isset($name)} {$name} {/if}</h2>
@@ -55,6 +54,9 @@
         <form id="delete-this-user" method="post" action="user.php?id={$id}">
             <input class="basic-button" type='submit' name='deleteuserbtn' value="Delete user"/>
         </form>
+        {/if}
+        {if $sessionrole=="admin" || ($sessionrole=="employer" && ($companyid==$sessioncompanyid || $companyid==8))}
+            <button class="basic-button" onclick="openChangeCompanyPopup()">Change company</button>
         {/if}
         {if $sessionrole=="admin" || ($sessionrole=="employer" && $companyid==$sessioncompanyid)}
             <button class="basic-button" onclick="openChangeRolePopup()">Change role</button>
@@ -79,9 +81,15 @@
             <h2 class="black-text">Change company</h2>
             <label for="dropdown">Select a company:</label>
             <select id="dropdown">
-                {foreach from=$companies item=company} 
-                <option value="{$company.name}">{$company.name}</option>
-                {/foreach}
+                {if $sessionrole=="admin"}
+                    {foreach from=$companies item=company} 
+                    <option value="{$company.name}">{$company.name}</option>
+                    {/foreach}
+                {/if}
+                {if $sessionrole=="employer"}
+                    <option value="Unemployed">Unemployed</option>
+                    <option value="{$sessioncompanyname}">{$sessioncompanyname}</option>
+                {/if}
             </select>
             <button class="basic-button" onclick="submitChange()">Submit</button>
             <button class="basic-button" onclick="closePopup()">Close</button>
