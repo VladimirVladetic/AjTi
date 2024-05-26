@@ -10,6 +10,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
     <script src="./js/essentials.js" defer></script>
+    <script src="./js/listings.js" defer></script>
     <title>Listing: {$name}</title>
 </head>
 <body>
@@ -19,6 +20,9 @@
         <div class="leftColumn">
 
             <img class="logo" src="./images/AT4.png" alt="logo"  width="150" height="auto"> 
+            {if ($employerid == $sessionid && $companyid == $sessioncompanyid) || $sessionrole=="admin"}
+                <button class="basic-button" onclick="deleteListing({$id})">Delete Listing</button>
+            {/if}
             <button class="basic-button" onclick='redirect("listings.php")'>Listings</button>
             <button class="basic-button" onclick='redirect("userList.php")'>User list</button>
             <button class="basic-button" onclick='redirect("user.php?id={$sessionid}")'>My profile</button>

@@ -16,3 +16,19 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+function deleteListing(listingId) {
+    if (confirm('Are you sure you want to delete this listing?')) {
+        $.ajax({
+            url: 'ajax_deleteListing.php',
+            type: 'POST',
+            data: { id: listingId },
+            success: function(response) {
+                window.location.href = 'listings.php'; 
+            },
+            error: function() {
+                alert('An error occurred while trying to delete the listing.');
+            }
+        });
+    }
+}
