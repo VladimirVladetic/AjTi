@@ -10,7 +10,7 @@
     margin-bottom: 5%;
 }
 
-input{
+input, textarea{
     width: 65%;
     padding: 3px 0;
     margin: 2% auto;
@@ -23,4 +23,18 @@ input{
 
 .button-container{
     margin-bottom: 5%;
+}
+
+#input-listing-smalldesc {
+    height: 5em;
+    overflow-y: auto; 
+    word-wrap: break-word;
+    display: block; 
+}
+
+#input-listing-info {
+    height: 10em;
+    overflow-y: auto; 
+    word-wrap: break-word;
+    display: block; 
 }

@@ -21,9 +21,9 @@
 
     <img class="logo" src="./images/AT4.png" alt="logo"  width="150" height="auto"> 
     <p class="margins-needed" id="sessionname" data-value="{$sessionname}">Welcome {$sessionname}</p>
-    {* {if $sessionrole=="admin"}
-        <button class="basic-button" onclick='redirect("newUser.php")'>Enter new user</button>
-    {/if} *}
+    {if $sessionrole=="admin" || $sessionrole=="employer"}
+        <button class="basic-button" onclick='redirect("newListing.php")'>Make new listing</button>
+    {/if}
     {if $sessionrole=="admin"}
         <button class="basic-button" onclick='redirect("newCompany.php")'>Enter new company</button>
     {/if}

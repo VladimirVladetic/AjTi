@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-05-26 17:35:30
+/* Smarty version 4.3.4, created on 2024-05-26 19:25:50
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\userList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_665356c2cc3588_34057235',
+  'unifunc' => 'content_6653709e755875_71640446',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '310e78e52520a32623aaa03e947b506f8172c5bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\userList.tpl',
-      1 => 1716737726,
+      1 => 1716744268,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_665356c2cc3588_34057235 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6653709e755875_71640446 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,7 +58,10 @@ function content_665356c2cc3588_34057235 (Smarty_Internal_Template $_smarty_tpl)
     <p class="margins-needed" id="sessionname" data-value="<?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
 ">Welcome <?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
 </p>
-        <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
+    <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin" || $_smarty_tpl->tpl_vars['sessionrole']->value == "employer") {?>
+        <button class="basic-button" onclick='redirect("newListing.php")'>Make new listing</button>
+    <?php }?>
+    <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
         <button class="basic-button" onclick='redirect("newCompany.php")'>Enter new company</button>
     <?php }?>
     <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?> <form id="delete-selected-users" method="post" action="userList.php"></form>

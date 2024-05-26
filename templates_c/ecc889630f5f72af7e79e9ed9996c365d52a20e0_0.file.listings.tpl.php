@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-05-05 19:48:20
+/* Smarty version 4.3.4, created on 2024-05-26 19:25:18
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\listings.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6637c664596633_05281706',
+  'unifunc' => 'content_6653707ea792b3_21705422',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ecc889630f5f72af7e79e9ed9996c365d52a20e0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\listings.tpl',
-      1 => 1714931299,
+      1 => 1716744303,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6637c664596633_05281706 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6653707ea792b3_21705422 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,8 +54,8 @@ function content_6637c664596633_05281706 (Smarty_Internal_Template $_smarty_tpl)
             <p class="margins-needed" id="sessionname" data-value="<?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
 ">Welcome <?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
 </p>
-            <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
-                <button class="basic-button" onclick='redirect("newUser.php")'>Enter new user</button>
+            <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin" || $_smarty_tpl->tpl_vars['sessionrole']->value == "employer") {?>
+                <button class="basic-button" onclick='redirect("newListing.php")'>Make new listing</button>
             <?php }?>
             <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
                 <button class="basic-button" onclick='redirect("newCompany.php")'>Enter new company</button>
