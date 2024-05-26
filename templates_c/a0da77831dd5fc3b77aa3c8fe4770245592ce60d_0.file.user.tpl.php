@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-05-05 20:43:55
+/* Smarty version 4.3.4, created on 2024-05-26 17:37:16
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6637d36b2de0d2_69105302',
+  'unifunc' => 'content_6653572c6b5b36_97246196',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a0da77831dd5fc3b77aa3c8fe4770245592ce60d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\user.tpl',
-      1 => 1714934632,
+      1 => 1716737830,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6637d36b2de0d2_69105302 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6653572c6b5b36_97246196 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,10 +72,7 @@ function content_6637d36b2de0d2_69105302 (Smarty_Internal_Template $_smarty_tpl)
                 <p>Year of birth: </p>
                 <input class="input-text" id="info-yearofbirth" type="number" name="yearofbirth" placeholder="Enter year of birth."<?php if ((isset($_smarty_tpl->tpl_vars['yearofbirth']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['yearofbirth']->value;?>
 " <?php }?>>
-                <p>Password: </p>
-                <input class="input-text" id="info-password" type="text" name="password" placeholder="Enter password."<?php if ((isset($_smarty_tpl->tpl_vars['password']->value))) {?> value="<?php echo $_smarty_tpl->tpl_vars['password']->value;?>
-" <?php }?>>
-                <p>Company: <?php if ((isset($_smarty_tpl->tpl_vars['companyname']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['companyname']->value;?>
+                                <p>Company: <?php if ((isset($_smarty_tpl->tpl_vars['companyname']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['companyname']->value;?>
  <?php }?></p>
                 <p>Role: <?php if ((isset($_smarty_tpl->tpl_vars['role']->value))) {?> <?php echo $_smarty_tpl->tpl_vars['role']->value;?>
  <?php }?></p>

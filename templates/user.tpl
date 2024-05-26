@@ -35,8 +35,8 @@
                 <input class="input-text" id="info-email" type="email" name="email" placeholder="Enter e-mail." {if isset($email)} value="{$email}" {/if}>
                 <p>Year of birth: </p>
                 <input class="input-text" id="info-yearofbirth" type="number" name="yearofbirth" placeholder="Enter year of birth."{if isset($yearofbirth)} value="{$yearofbirth}" {/if}>
-                <p>Password: </p>
-                <input class="input-text" id="info-password" type="text" name="password" placeholder="Enter password."{if isset($password)} value="{$password}" {/if}>
+                {* <p>Password: </p>
+                <input class="input-text" id="info-password" type="text" name="password" placeholder="Enter password."{if isset($password)} value="{$password}" {/if}> *}
                 <p>Company: {if isset($companyname)} {$companyname} {/if}</p>
                 <p>Role: {if isset($role)} {$role} {/if}</p>
             </form>
