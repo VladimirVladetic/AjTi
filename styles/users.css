@@ -48,6 +48,15 @@ td{
     animation: spin 1s linear infinite;
 }
 
+table tr {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+table tr:hover {
+    background-color: black;
+    color: white;
+}
+
 @keyframes spin{
     to{
         transform: rotate(360deg);

@@ -11,6 +11,10 @@
     bottom: 0; 
     width: calc(20%);
     padding: 1.5%;
+    border: solid 3px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .rightColumn{
