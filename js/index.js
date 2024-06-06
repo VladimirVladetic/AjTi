@@ -12,7 +12,7 @@ function registrationDiv(){
     registrationButton.style.display = "none";
     registerButton.style.display = "flex";
     registrationInstruction.style.display = "flex";
-    document.getElementById("flexible-padding").style.paddingTop = "5%";
+    document.getElementById("flexible-padding").style.paddingTop = "0";
 }
 
 function backToLogin(){

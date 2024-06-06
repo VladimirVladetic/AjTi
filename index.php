@@ -12,8 +12,8 @@ if(!isset($_SESSION['attempts'])){
     $_SESSION['attempts']=1;
 }
 
-if(!isset($_SESSION['registrationFail'])){
-    $_SESSION['registrationFail'] = false;
+if(!isset($_SESSION['registrationAttempt'])){
+    $_SESSION['registrationAttempt'] = false;
 }
 
 if(!isset($_SESSION['alertText'])){
@@ -94,27 +94,53 @@ else if(isset($_POST['registerbtn'])){
         $_SESSION['alertText'] = $parameterChecker->getAlertText();
     
         if(!$error){
-            $_SESSION['registrationFail'] = false;
-            $sql = "insert into user(id,username,name,surname,yearofbirth,password,role,email,companyid)values('$id','$username','$name','$surname','$yearofbirth','$password','$role','$email','$companyid')";
-            if(mysqli_query($con,$sql)){
-                header("Location: index.php");
-            }else{
-                echo "<script>alert('Failure!')</script>";
+            $_SESSION['registrationAttempt'] = false;
+            if(isset($_FILES['register-cv']) && $_FILES['register-cv']['error'] == UPLOAD_ERR_OK) {
+                $cvDirectory = 'pdf/';
+
+                if (!file_exists($cvDirectory)) {
+                    mkdir($cvDirectory, 0777, true);
+                }
+
+                $cvFile = $cvDirectory . $id . '.pdf';
+                $cvFileType = strtolower(pathinfo($_FILES['register-cv']['name'], PATHINFO_EXTENSION));
+
+                if($cvFileType != "pdf") {
+                    
+                    $_SESSION['alertText'] = "Only PDF files are allowed.";
+                } else {
+                    if (move_uploaded_file($_FILES['register-cv']['tmp_name'], $cvFile)) {
+                        $sql = "insert into user(id,username,name,surname,yearofbirth,password,role,email,companyid)values('$id','$username','$name','$surname','$yearofbirth','$password','$role','$email','$companyid')";
+                        if(mysqli_query($con,$sql)){
+                            $_SESSION['registrationAttempt'] = true;
+                            $_SESSION['alertText'] = "Registration successful. Your username is $username";
+                            header("Location: index.php");
+                        } else {
+                            echo "<script>alert('Failure!')</script>";
+                        }
+                    } else {
+                        $_SESSION['registrationAttempt'] = true;
+                        $_SESSION['alertText'] = "There was an error uploading your file.";
+                    }
+                }
+            } else {
+                $_SESSION['registrationAttempt'] = true;
+                $_SESSION['alertText'] = "File upload failed.";
             }
         }
         else{
-            $_SESSION['registrationFail'] = true;
+            $_SESSION['registrationAttempt'] = true;
         }
     }
     else{
-        $_SESSION['registrationFail'] = true;
+        $_SESSION['registrationAttempt'] = true;
         $_SESSION['alertText'] = "User already exists.";
     }
 }
 
 mysqli_close($con);
 
- $smarty->assign('alertText', $_SESSION['alertText']);
-$smarty->assign('registrationFail', $_SESSION['registrationFail']);
+$smarty->assign('alertText', $_SESSION['alertText']);
+$smarty->assign('registrationAttempt', $_SESSION['registrationAttempt']);
 $smarty->assign('attempts', $_SESSION['attempts']);
 $smarty->display('templates/index.tpl');

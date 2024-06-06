@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-05-05 19:33:11
+/* Smarty version 4.3.4, created on 2024-06-06 21:44:02
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6637c2d7b4ed49_29337118',
+  'unifunc' => 'content_66621182f23b11_84972636',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e6140f53ed83fddb711dbb2fe19933ea6eaea4c5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\index.tpl',
-      1 => 1714930363,
+      1 => 1717703008,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6637c2d7b4ed49_29337118 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66621182f23b11_84972636 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,13 +64,14 @@ function content_6637c2d7b4ed49_29337118 (Smarty_Internal_Template $_smarty_tpl)
                 lowercase and uppercase character as well as a number. Please use only letters from the English 
                 alphabet when registering an account.</p>
 
-            <form id="registration-form" style="display: none;" method="post">
+            <form id="registration-form" style="display: none;" method="post" enctype="multipart/form-data">
                 <input type="text" name="register-name" placeholder="Enter your name.">
                 <input type="text" name="register-surname" placeholder="Enter your surname.">
                 <input type="password" name="register-password" placeholder="Enter your password.">
                 <input type="password" name="register-password-confirm" placeholder="Reenter your password.">
                 <input type="email" name="register-email" placeholder="Enter your email.">
                 <input type="text" name="register-year" placeholder="Enter your year of birth.">
+                <input type="file" name="register-cv" accept="application/pdf">
             </form>
             <button class="basic-button" name="registerbtn" id="register-button" form="registration-form" style="display: none;">Register</button>
             <button class="basic-button" onclick="backToLogin()" name="backbtn" id="back-button" style="display: none;">Back</button>
@@ -85,14 +86,13 @@ function content_6637c2d7b4ed49_29337118 (Smarty_Internal_Template $_smarty_tpl)
             <p class="alertText">Incorrect user information.</p>
         </div> 
     <?php }?>
-    <?php if ($_smarty_tpl->tpl_vars['registrationFail']->value == true) {?>
+    <?php if ($_smarty_tpl->tpl_vars['registrationAttempt']->value == true) {?>
         <div class="alert" id="registrationFailAlert" style="display: block; margin-top: 5%;">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
             <p class="alertText"><?php echo $_smarty_tpl->tpl_vars['alertText']->value;?>
 </p>
         </div> 
     <?php }?>
-
 </body>
 </html><?php }
 }
