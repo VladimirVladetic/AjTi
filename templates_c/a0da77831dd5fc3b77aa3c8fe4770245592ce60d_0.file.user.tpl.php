@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-05-26 17:37:16
+/* Smarty version 4.3.4, created on 2024-06-25 16:19:55
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6653572c6b5b36_97246196',
+  'unifunc' => 'content_667ad20bb26fa6_78428769',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a0da77831dd5fc3b77aa3c8fe4770245592ce60d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\user.tpl',
-      1 => 1716737830,
+      1 => 1719325190,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6653572c6b5b36_97246196 (Smarty_Internal_Template $_smarty_tpl) {
+function content_667ad20bb26fa6_78428769 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,10 +93,8 @@ function content_6653572c6b5b36_97246196 (Smarty_Internal_Template $_smarty_tpl)
         <?php }?>
             
         <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin") {?>
-        <form id="delete-this-user" method="post" action="user.php?id=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
-">
-            <input class="basic-button" type='submit' name='deleteuserbtn' value="Delete user"/>
-        </form>
+            <button class="basic-button" onclick="deleteUser(<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
+)">Delete user</button>
         <?php }?>
         <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin" || ($_smarty_tpl->tpl_vars['sessionrole']->value == "employer" && ($_smarty_tpl->tpl_vars['companyid']->value == $_smarty_tpl->tpl_vars['sessioncompanyid']->value || $_smarty_tpl->tpl_vars['companyid']->value == 8))) {?>
             <button class="basic-button" onclick="openChangeCompanyPopup()">Change company</button>
@@ -110,12 +108,13 @@ function content_6653572c6b5b36_97246196 (Smarty_Internal_Template $_smarty_tpl)
     </div>
 
     <div class="rightColumn">
-
-        <h1>User CV:</h1>
-
+        <h1 id="h1CV">User CV:</h1>
         <iframe id="pdfViewer" src="viewer.php?file=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 .pdf"></iframe>
-
+        <button class="download-button" onclick="downloadPDF(<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
+)">
+            <img class="download" src="./images/downloadIcon.png" alt="Download icon">   
+        </button>
     </div>
 
     </div>

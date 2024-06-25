@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-06-06 21:44:02
+/* Smarty version 4.3.4, created on 2024-06-25 16:47:01
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_66621182f23b11_84972636',
+  'unifunc' => 'content_667ad8650f8581_15315127',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e6140f53ed83fddb711dbb2fe19933ea6eaea4c5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\index.tpl',
-      1 => 1717703008,
+      1 => 1719326776,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66621182f23b11_84972636 (Smarty_Internal_Template $_smarty_tpl) {
+function content_667ad8650f8581_15315127 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/basic.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/essentials.css">
     <?php echo '<script'; ?>
  src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"><?php echo '</script'; ?>
@@ -46,7 +46,7 @@ function content_66621182f23b11_84972636 (Smarty_Internal_Template $_smarty_tpl)
     
         <div>
 
-            <img class="logo" src="./images/new-logo.png" alt="Atos logo"  width="200" height="100">    
+            <img id="logo" class="logo" src="./images/new-logo.png" alt="AjTi logo"  width="200" height="100">    
 
         </div>
 

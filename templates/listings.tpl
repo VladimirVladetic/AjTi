@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/listings.css">
+    <link id="grid" rel="stylesheet" href="./styles/grid1-2.css">
     <link rel="stylesheet" href="./styles/essentials.css">
-    <link rel="stylesheet" href="./styles/grid1-2.css">
+    <link rel="stylesheet" href="./styles/listings.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+    <script src="./js/enterLog.js" defer></script>
     <script src="./js/essentials.js" defer></script>
     <script src="./js/listings.js" defer></script>
     <title>Job listings</title>
 </head>
 
-<body>
+<body onload="enterLog({$logsent},{$attempts})">
 
     <div class="container">
 
         <div class="leftColumn">
 
             <img class="logo" src="./images/AT4.png" alt="logo"> 
-            <p class="margins-needed" id="sessionname" data-value="{$sessionname}">Welcome {$sessionname}</p>
+            <p class="margins-needed" id="sessionname" data-value="{$sessionusername}">Welcome {$sessionname}</p>
             {if $sessionrole=="admin" || $sessionrole=="employer"}
                 <button class="basic-button" onclick='redirect("newListing.php")'>Make new listing</button>
             {/if}
@@ -39,6 +40,7 @@
 
             <div class="searchBar">
                 <select name="company" id="info-company">
+                    <option value="Any">Any</option>
                     {foreach from=$companydata item=company} 
                         <option value="{$company.name}">{$company.name}</option>
                     {/foreach}

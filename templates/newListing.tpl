@@ -31,7 +31,7 @@
                 <textarea type="text" name="info" placeholder="Enter listing information" id="input-listing-info"></textarea><br>
 
                 <label for="input-listing-sector">Payment in euros:</label><br>
-                <input type="text" name="payment" placeholder="Enter listing payment in format eg. (amount) per hour" id="input-listing-payment"><br>
+                <input type="text" name="payment" placeholder="Format eg. (amount) per hour" id="input-listing-payment"><br>
 
             </form>
 

@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="./styles/grid1-2.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
-    <script src="./js/enterLog.js" defer></script>
     <script src="./js/userSearch.js" defer></script>
     <script src="./js/essentials.js" defer></script>
     <title>User list</title>
 </head>
-<body onload="enterLog({$logsent},{$attempts})">
+<body>
 
     <div class="container">
 

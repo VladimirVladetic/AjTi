@@ -78,3 +78,18 @@ a {
     padding: 0;
     margin: 1%;
 }
+
+@media (max-width: 992px) {
+    body {
+        margin: 2%;
+    }
+    .logo {
+        width: 60%;
+        display: block;
+        margin-left: 2%;
+    }
+    .basic-button {
+        width: 40%;
+        margin: 2% 0;
+    }
+}

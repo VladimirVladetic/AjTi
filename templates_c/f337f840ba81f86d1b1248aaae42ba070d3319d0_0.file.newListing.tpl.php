@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-05-26 19:36:44
+/* Smarty version 4.3.4, created on 2024-06-25 16:22:14
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\newListing.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6653732c6d22f8_06510074',
+  'unifunc' => 'content_667ad296f3eba2_74447684',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f337f840ba81f86d1b1248aaae42ba070d3319d0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\newListing.tpl',
-      1 => 1716744988,
+      1 => 1719325267,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6653732c6d22f8_06510074 (Smarty_Internal_Template $_smarty_tpl) {
+function content_667ad296f3eba2_74447684 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,7 +60,7 @@ function content_6653732c6d22f8_06510074 (Smarty_Internal_Template $_smarty_tpl)
                 <textarea type="text" name="info" placeholder="Enter listing information" id="input-listing-info"></textarea><br>
 
                 <label for="input-listing-sector">Payment in euros:</label><br>
-                <input type="text" name="payment" placeholder="Enter listing payment in format eg. (amount) per hour" id="input-listing-payment"><br>
+                <input type="text" name="payment" placeholder="Format eg. (amount) per hour" id="input-listing-payment"><br>
 
             </form>
 

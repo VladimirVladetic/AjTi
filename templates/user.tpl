@@ -51,9 +51,7 @@
         {/if}
             
         {if $sessionrole=="admin"}
-        <form id="delete-this-user" method="post" action="user.php?id={$id}">
-            <input class="basic-button" type='submit' name='deleteuserbtn' value="Delete user"/>
-        </form>
+            <button class="basic-button" onclick="deleteUser({$id})">Delete user</button>
         {/if}
         {if $sessionrole=="admin" || ($sessionrole=="employer" && ($companyid==$sessioncompanyid || $companyid==8))}
             <button class="basic-button" onclick="openChangeCompanyPopup()">Change company</button>
@@ -67,11 +65,11 @@
     </div>
 
     <div class="rightColumn">
-
-        <h1>User CV:</h1>
-
+        <h1 id="h1CV">User CV:</h1>
         <iframe id="pdfViewer" src="viewer.php?file={$id}.pdf"></iframe>
-
+        <button class="download-button" onclick="downloadPDF({$id})">
+            <img class="download" src="./images/downloadIcon.png" alt="Download icon">   
+        </button>
     </div>
 
     </div>

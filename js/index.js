@@ -5,6 +5,7 @@ function registrationDiv(){
     var registrationButton = document.getElementById("registration-button");
     var registerButton = document.getElementById("register-button");
     var registrationInstruction = document.getElementById("registration-instruction");
+    var logo = document.getElementById("logo");
     document.getElementById("back-button").style.display = "flex";
     loginFrom.style.display = "none";
     loginButton.style.display = "none";
@@ -13,6 +14,10 @@ function registrationDiv(){
     registerButton.style.display = "flex";
     registrationInstruction.style.display = "flex";
     document.getElementById("flexible-padding").style.paddingTop = "0";
+
+    if (window.innerWidth < 992) {
+        logo.style.display = "none";
+    }
 }
 
 function backToLogin(){
@@ -24,6 +29,7 @@ function backToLogin(){
     document.getElementById("registration-instruction").style.display = "none";
     document.getElementById("back-button").style.display = "none";
     document.getElementById("flexible-padding").style.paddingTop = "20%";
+    document.getElementById("logo").style.display = "flex";
 }
 
 

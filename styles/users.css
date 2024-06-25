@@ -62,3 +62,42 @@ table tr:hover {
         transform: rotate(360deg);
     }
 }
+@media (max-width: 992px) {
+    td {
+        font-size: 1.6rem;
+        padding: 0.5% 1%;
+    }
+
+    .logo {
+        width: 40%; 
+    }
+
+    #searchbtn {
+        font-size: 1.6rem;
+        padding: 2% 3%;
+    }
+
+    .magglass {
+        width: 8%; 
+        height: auto; 
+    }
+
+    .spinner {
+        height: 3%; 
+        width: 3%;
+        border-width: 0.3rem;
+    }
+
+    table th:not(:nth-child(2)) {
+        display: none;
+    }
+
+    table td:not(:nth-child(2)) {
+        display: none;
+    }
+    .rightColumn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

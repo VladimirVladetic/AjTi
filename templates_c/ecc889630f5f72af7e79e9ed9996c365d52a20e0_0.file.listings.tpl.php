@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-05-26 19:25:18
+/* Smarty version 4.3.4, created on 2024-06-25 16:43:35
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\listings.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6653707ea792b3_21705422',
+  'unifunc' => 'content_667ad797b828e2_15837175',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ecc889630f5f72af7e79e9ed9996c365d52a20e0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\listings.tpl',
-      1 => 1716744303,
+      1 => 1719326601,
       2 => 'file',
     ),
   ),
@@ -20,20 +20,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6653707ea792b3_21705422 (Smarty_Internal_Template $_smarty_tpl) {
+function content_667ad797b828e2_15837175 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/listings.css">
+    <link id="grid" rel="stylesheet" href="./styles/grid1-2.css">
     <link rel="stylesheet" href="./styles/essentials.css">
-    <link rel="stylesheet" href="./styles/grid1-2.css">
+    <link rel="stylesheet" href="./styles/listings.css">
     <?php echo '<script'; ?>
  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
  src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="./js/enterLog.js" defer><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
  src="./js/essentials.js" defer><?php echo '</script'; ?>
@@ -44,14 +47,16 @@ function content_6653707ea792b3_21705422 (Smarty_Internal_Template $_smarty_tpl)
     <title>Job listings</title>
 </head>
 
-<body>
+<body onload="enterLog(<?php echo $_smarty_tpl->tpl_vars['logsent']->value;?>
+,<?php echo $_smarty_tpl->tpl_vars['attempts']->value;?>
+)">
 
     <div class="container">
 
         <div class="leftColumn">
 
             <img class="logo" src="./images/AT4.png" alt="logo"> 
-            <p class="margins-needed" id="sessionname" data-value="<?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
+            <p class="margins-needed" id="sessionname" data-value="<?php echo $_smarty_tpl->tpl_vars['sessionusername']->value;?>
 ">Welcome <?php echo $_smarty_tpl->tpl_vars['sessionname']->value;?>
 </p>
             <?php if ($_smarty_tpl->tpl_vars['sessionrole']->value == "admin" || $_smarty_tpl->tpl_vars['sessionrole']->value == "employer") {?>
@@ -73,6 +78,7 @@ function content_6653707ea792b3_21705422 (Smarty_Internal_Template $_smarty_tpl)
 
             <div class="searchBar">
                 <select name="company" id="info-company">
+                    <option value="Any">Any</option>
                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['companydata']->value, 'company');
 $_smarty_tpl->tpl_vars['company']->do_else = true;

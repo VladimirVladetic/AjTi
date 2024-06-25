@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
         listings.forEach(function(listing) {
             var companyName = listing.getAttribute("data-company-name");
             console.log(companyName);
-            if (selectedCompany === companyName || selectedCompany === "All") {
+            if (selectedCompany === companyName || selectedCompany === "Any") {
                 listing.style.display = "block";
             } else {
                 listing.style.display = "none";

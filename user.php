@@ -50,13 +50,12 @@ if(isset($_GET['id'])){
 }
 
 if(isset($_POST['deleteuserbtn'])){
+    $id = $_POST['id'];
     echo "<script>alert({$id})</script>";
     $sql = "delete from user where id=" . $id;
     mysqli_query($con,$sql);
-    header("Location: userList.php");
 }
-
-if(isset($_POST['name']) || isset($_POST['surname']) || isset($_POST['username']) || isset($_POST['yearofbirth']) || isset($_POST['password'])){
+else if(isset($_POST['name']) || isset($_POST['surname']) || isset($_POST['username']) || isset($_POST['yearofbirth']) || isset($_POST['password'])){
     $name = $_POST['name'];
     $surname = $_POST['surname'];
     $yearofbirth = $_POST['yearofbirth'];

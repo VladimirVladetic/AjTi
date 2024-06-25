@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-05-03 18:19:19
+/* Smarty version 4.3.4, created on 2024-06-25 16:20:38
   from 'C:\xampp\htdocs\smarty-4.3.4\AjTi\templates\newCompany.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_66350e87229647_11451739',
+  'unifunc' => 'content_667ad236db8942_00508711',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '36fd206ce08989b5a85da599206c40e21f859043' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty-4.3.4\\AjTi\\templates\\newCompany.tpl',
-      1 => 1714753152,
+      1 => 1716744491,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66350e87229647_11451739 (Smarty_Internal_Template $_smarty_tpl) {
+function content_667ad236db8942_00508711 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/essentials.css">
-    <link rel="stylesheet" href="./styles/newCompany.css">
+    <link rel="stylesheet" href="./styles/newEntity.css">
     <?php echo '<script'; ?>
  src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"><?php echo '</script'; ?>
 >
